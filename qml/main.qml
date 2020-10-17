@@ -13,4 +13,9 @@ Window {
     {
 
     }
+
+    RightBar
+    {
+
+    }
 }

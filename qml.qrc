@@ -1,8 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>qml/main.qml</file>
-        <file>qml/components/Button.qml</file>
-        <file>qml/components/LeftBar.qml</file>
         <file>pics/alarm/alarm-clock-emp-line.png</file>
         <file>pics/alarm/alarm-clock-line.png</file>
         <file>pics/alarm/alarm-clock-rgb-line.png</file>
@@ -29,5 +26,9 @@
         <file>pics/wifi/wifi-line.png</file>
         <file>pics/wifi/wifi-rgb-line.png</file>
         <file>pics/wifi/wifi-rgb.png</file>
+        <file>qml/components/Button.qml</file>
+        <file>qml/components/LeftBar.qml</file>
+        <file>qml/components/RightBar.qml</file>
+        <file>qml/main.qml</file>
     </qresource>
 </RCC>

@@ -26,7 +26,8 @@ lupdate_only {
 SOURCES =+ \
     qml/main.qml \
     qml/components/Button.qml \
-    qml/components/LeftBar.qml
+    qml/components/LeftBar.qml \
+    qml/components/RightBar.qml
 }
 
 DISTFILES += \
