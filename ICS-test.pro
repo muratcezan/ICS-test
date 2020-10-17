@@ -35,6 +35,8 @@ DISTFILES += \
     pics/alarm/alarm-clock-line.png \
     pics/alarm/alarm-clock-rgb-line.png \
     pics/alarm/alarm-clock-rgb.png \
+    pics/bluetooth/bluetooth-off.png \
+    pics/bluetooth/bluetooth-on.png \
     pics/light/lightbulb-emp.png \
     pics/light/lightbulb-line-emp.png \
     pics/light/lightbulb-line.png \

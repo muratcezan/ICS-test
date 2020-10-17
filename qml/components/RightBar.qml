@@ -45,7 +45,7 @@ Rectangle {
 
             Image {
                 id: bluetoothIcon
-                source: "qrc:/pics/bluetooth/bluetooth-line.png"
+                source: "qrc:/pics/bluetooth/bluetooth-off.png"
                 width: 110
                 height: 110
                 anchors.centerIn: parent
