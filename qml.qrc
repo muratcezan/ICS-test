@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>qml/main.qml</file>
+        <file>other/power-off.png</file>
+        <file>other/power-on.png</file>
+        <file>qml/components/Button.qml</file>
+        <file>other/power-emp.png</file>
     </qresource>
 </RCC>

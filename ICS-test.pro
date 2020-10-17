@@ -24,5 +24,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 lupdate_only {
 SOURCES =+ \
-    qml/main.qml
+    qml/main.qml \
+    qml/components/Button.qml
 }
+
+DISTFILES += \
+    other/power-emp.png \
+    other/power-off.png \
+    other/power-on.png
