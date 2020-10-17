@@ -25,10 +25,34 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 lupdate_only {
 SOURCES =+ \
     qml/main.qml \
-    qml/components/Button.qml
+    qml/components/Button.qml \
+    qml/components/LeftBar.qml
 }
 
 DISTFILES += \
-    other/power-emp.png \
-    other/power-off.png \
-    other/power-on.png
+    pics/alarm/alarm-clock-emp-line.png \
+    pics/alarm/alarm-clock-line.png \
+    pics/alarm/alarm-clock-rgb-line.png \
+    pics/alarm/alarm-clock-rgb.png \
+    pics/light/lightbulb-emp.png \
+    pics/light/lightbulb-line-emp.png \
+    pics/light/lightbulb-line.png \
+    pics/light/lightbulb-off.png \
+    pics/light/lightbulb-on.png \
+    pics/light/lightbulb-rgb-line.png \
+    pics/light/lightbulb-rgb.png \
+    pics/menu/menu-black.png \
+    pics/menu/menu-rgb.png \
+    pics/menu/menu.png \
+    pics/more/more-rgb.png \
+    pics/more/more.png \
+    pics/oven/oven-line.png \
+    pics/oven/oven-rgb-line.png \
+    pics/oven/oven-rgb.png \
+    pics/power/power-emp.png \
+    pics/power/power-off.png \
+    pics/power/power-on.png \
+    pics/settings/settings.png \
+    pics/wifi/wifi-line.png \
+    pics/wifi/wifi-rgb-line.png \
+    pics/wifi/wifi-rgb.png
