@@ -1,9 +1,11 @@
+// Flexible Button Component
+
 import QtQuick 2.0
 
-// Button
 Rectangle {
-    property int buttonWitdh                            // Button width
-    property int buttonHeight                           // Button height
+    // Button Properties
+    property int buttonWitdh        : 0                 // Button width
+    property int buttonHeight       : 0                 // Button height
     property bool imgVisible        : false             // Button image visible
     property string imgSource       : ""                // Image source
     property bool textVisible       : false             // Button text visible
@@ -22,7 +24,7 @@ Rectangle {
     width: buttonWitdh
     height: buttonHeight
     color: rectColor
-    radius: rectRadius //buttonWitdh/4
+    radius: rectRadius
     border.width: rectBorderSize
     border.color: rectBorderColor
 
@@ -31,12 +33,12 @@ Rectangle {
         id: btnImage
         source: imgSource
         visible: imgVisible
-        width: imgWidth //parent.width - 20
-        height: imgHeight //parent.height - 20
+        width: imgWidth
+        height: imgHeight
         anchors.centerIn: parent
     }
 
-    // Button Text
+    // Button text
     Text {
         id: btnTxt
         text: textSource
