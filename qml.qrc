@@ -32,5 +32,6 @@
         <file>qml/components/LeftBar.qml</file>
         <file>qml/components/RightBar.qml</file>
         <file>qml/main.qml</file>
+        <file>qml/pages/PageDefault.qml</file>
     </qresource>
 </RCC>

@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 
 import "components"
+import "pages"
 
 Window {
     width: 1600
@@ -11,11 +12,17 @@ Window {
 
     LeftBar
     {
+        id: leftBar
+    }
 
+    PageDefault
+    {
+        anchors.left: leftBar.right
+        anchors.top: leftBar.top
     }
 
     RightBar
     {
-
+        id: rightBar
     }
 }
