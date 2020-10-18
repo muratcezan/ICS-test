@@ -4,7 +4,7 @@ Rectangle
 {
     width: 880
     height: parent.height
-    color:"#666666"
+    color:"#333333"
 
     Rectangle {
         id: dPageFirstItem
