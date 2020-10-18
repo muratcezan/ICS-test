@@ -44,5 +44,6 @@
         <file>qml/pages/PageManuelTemperature.qml</file>
         <file>qml/components/SliderNew.qml</file>
         <file>pics/other/triangle.png</file>
+        <file>qml/components/TempBar.qml</file>
     </qresource>
 </RCC>

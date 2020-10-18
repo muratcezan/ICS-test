@@ -37,7 +37,8 @@ SOURCES =+ \
     qml/pages/PageRunning.qml \
     qml/pages/PageManuelTimer.qml \
     qml/pages/PageManuelTemperature.qml \
-    qml/components/SliderNew.qml
+    qml/components/SliderNew.qml \
+    qml/components/TempBar.qml
 }
 
 DISTFILES += \
