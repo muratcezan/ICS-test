@@ -34,14 +34,20 @@ Rectangle
             anchors.left: tempTimeArea.left
             anchors.top: tempTimeArea.top
             color: "#4d4d4d"
-
+            Rectangle {
+                width: 200
+                height: 4
+                color: "#33ff33"
+                anchors.left: parent.left
+                anchors.top: parent.top
+            }
             Button {
                 id: tempMenuButton
                 buttonWitdh: 200
                 buttonHeight: parent.height
                 textVisible: true
                 textSource: "Temperature"
-                textColor: "#2eb82e"
+                textColor: "#33ff33"
                 txtSize: 24
                 txtBold: true
                 anchors.left: parent.left
@@ -73,7 +79,7 @@ Rectangle
                 text: "425"
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: "#2eb82e"
+                color: "#33ff33"
                 font.pixelSize: 50
                 font.bold: false
             }
