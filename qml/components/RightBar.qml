@@ -31,6 +31,7 @@ Rectangle {
             Button
             {
                 buttonWitdh: parent.width
+                buttonHeight: parent.width
                 imgVisible: true
                 imgSource: "qrc:/pics/wifi/wifi-line.png"
                 textVisible: false
@@ -51,6 +52,7 @@ Rectangle {
             Button
             {
                 buttonWitdh: parent.width
+                buttonHeight: parent.width
                 imgVisible: true
                 imgSource: "qrc:/pics/bluetooth/bluetooth-off.png"
                 textVisible: false
@@ -81,6 +83,7 @@ Rectangle {
             Button
             {
                 buttonWitdh: parent.width
+                buttonHeight: parent.width
                 imgVisible: true
                 imgSource: "qrc:/pics/light/lightbulb-off.png"
                 textVisible: false
@@ -102,6 +105,7 @@ Rectangle {
             Button
             {
                 buttonWitdh: parent.width
+                buttonHeight: parent.width
                 imgVisible: true
                 imgSource: "qrc:/pics/alarm/alarm-clock-line.png"
                 textVisible: false
@@ -123,6 +127,7 @@ Rectangle {
             Button
             {
                 buttonWitdh: parent.width
+                buttonHeight: parent.width
                 imgVisible: true
                 imgSource: "qrc:/pics/settings/settings.png"
                 textVisible: false

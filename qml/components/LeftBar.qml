@@ -23,6 +23,7 @@ Rectangle{
         Button {
             id: powerBtn
             buttonWitdh: parent.width / 2
+            buttonHeight: parent.width / 2
             imgVisible: true
             imgSource: "qrc:/pics/power/power-off.png"
             textVisible: false
@@ -52,6 +53,7 @@ Rectangle{
             Button
             {
                 buttonWitdh: parent.width
+                buttonHeight: parent.width
                 imgVisible: true
                 imgSource: "qrc:/pics/oven/oven-line.png"
                 textVisible: false
@@ -73,6 +75,7 @@ Rectangle{
             Button
             {
                 buttonWitdh: parent.width
+                buttonHeight: parent.width
                 imgVisible: true
                 imgSource: "qrc:/pics/menu/menu.png"
                 textVisible: false
@@ -94,6 +97,7 @@ Rectangle{
             Button
             {
                 buttonWitdh: parent.width
+                buttonHeight: parent.width
                 imgVisible: true
                 imgSource: "qrc:/pics/more/more.png"
                 textVisible: false
