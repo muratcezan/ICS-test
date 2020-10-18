@@ -14,6 +14,11 @@ Rectangle
     property int numBtnBorder       :           2               // Number buttons border size
     property bool numBtnTxtBold     :           true            // Number buttons text bold
 
+    // Timer text properties
+    property int txtSize            :           50              // Timer text size
+    property string txtColor        :           "#33ff33"       // Timer text color
+    property bool txtBold           :           true            // Timer text bold
+
     width: 880
     height: parent.height
     color: "#333333"
@@ -45,6 +50,13 @@ Rectangle
             anchors.top: tempTimeArea.top
             color: "#4d4d4d"
 
+            Rectangle {
+                width: 200
+                height: 4
+                color: "#33ff33"
+                anchors.horizontalCenter: timerMenuButton.horizontalCenter
+                anchors.top: parent.top
+            }
             Button {
                 id: tempMenuButton
                 buttonWitdh: 200
@@ -62,7 +74,7 @@ Rectangle
                 buttonHeight: parent.height
                 textVisible: true
                 textSource: "Timer"
-                textColor: "#2eb82e"
+                textColor: "#33ff33"
                 txtSize: 24
                 txtBold: true
                 anchors.left: tempMenuButton.right
@@ -82,34 +94,34 @@ Rectangle
                 text: ":"
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: "#2eb82e"
-                font.pixelSize: 50
-                font.bold: true
+                color: txtColor
+                font.pixelSize: txtSize
+                font.bold: txtBold
             }
             Text {
                 id: txtHrSecondItem
                 text: "H"
-                color: "#2eb82e"
-                font.pixelSize: 50
-                font.bold: true
+                color: txtColor
+                font.pixelSize: txtSize
+                font.bold: txtBold
                 anchors.right: txtDot.left
                 anchors.top: txtDot.top
             }
             Text {
                 id: txtHrFirstItem
                 text: "H"
-                color: "#2eb82e"
-                font.pixelSize: 50
-                font.bold: true
+                color: txtColor
+                font.pixelSize: txtSize
+                font.bold: txtBold
                 anchors.right: txtHrSecondItem.left
                 anchors.top: txtHrSecondItem.top
             }
             Text {
                 id: txtScFirstItem
                 text: "S"
-                color: "#2eb82e"
-                font.pixelSize: 50
-                font.bold: true
+                color: txtColor
+                font.pixelSize: txtSize
+                font.bold: txtBold
                 anchors.left: txtDot.right
                 anchors.top: txtDot.top
             }
@@ -118,9 +130,9 @@ Rectangle
                 text: "S"
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: "#2eb82e"
-                font.pixelSize: 50
-                font.bold: true
+                color: txtColor
+                font.pixelSize: txtSize
+                font.bold: txtBold
                 anchors.left: txtScFirstItem.right
                 anchors.top: txtScFirstItem.top
             }
