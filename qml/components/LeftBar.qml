@@ -7,7 +7,9 @@ Rectangle{
     height: parent.height
     anchors.left: parent.left
     anchors.top: parent.top
-    color: "gray"
+    color: "#8c8c8c"
+    border.width: 1
+    border.color: "white"
 
     // Left big area
     Rectangle {
