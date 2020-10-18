@@ -61,7 +61,7 @@ Rectangle
                 buttonWitdh: 200
                 buttonHeight: parent.height
                 textVisible: true
-                textSource: "Temperature"
+                textSource: "Timer"
                 textColor: "#2eb82e"
                 txtSize: 24
                 txtBold: true
