@@ -39,7 +39,7 @@ Rectangle
 
         Text {
             id: tempText
-            text: "425 F"
+            text: "425\xB0F"
             anchors.left: parent.left
             anchors.bottom: parent.bottom
             anchors.leftMargin: 30
