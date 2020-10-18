@@ -30,7 +30,8 @@ SOURCES =+ \
     qml/components/RightBar.qml \
     qml/pages/PageDefault.qml \
     qml/components/Header.qml \
-    qml/components/Footer.qml
+    qml/components/Footer.qml \
+    qml/pages/PageCameraPreview.qml
 }
 
 DISTFILES += \
@@ -52,6 +53,7 @@ DISTFILES += \
     pics/menu/menu.png \
     pics/more/more-rgb.png \
     pics/more/more.png \
+    pics/other/duck.png \
     pics/oven/oven-line.png \
     pics/oven/oven-rgb-line.png \
     pics/oven/oven-rgb.png \

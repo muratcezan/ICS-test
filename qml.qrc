@@ -35,5 +35,7 @@
         <file>qml/pages/PageDefault.qml</file>
         <file>qml/components/Header.qml</file>
         <file>qml/components/Footer.qml</file>
+        <file>qml/pages/PageCameraPreview.qml</file>
+        <file>pics/other/duck.png</file>
     </qresource>
 </RCC>
