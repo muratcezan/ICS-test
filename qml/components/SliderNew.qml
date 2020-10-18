@@ -1,8 +1,8 @@
 import QtQuick 2.0
 
 Rectangle {
-
     property int value: triange.x
+
     id: mySlider
     height: 20
     radius: 10
@@ -21,7 +21,7 @@ Rectangle {
         source: "qrc:/pics/other/triangle.png"
         width: 30
         height: 30
-        x:1; y:1
+        x:405; y:1
 
         MouseArea {
             anchors.fill: parent
