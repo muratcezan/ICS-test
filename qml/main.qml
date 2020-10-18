@@ -15,11 +15,48 @@ Window {
         id: leftBar
     }
 
-    PageDefault
+//    PageDefault
+//    {
+//        anchors.left: leftBar.right
+//        anchors.top: leftBar.top
+//    }
+
+//    PageCameraPreview
+//    {
+
+//        anchors.left: leftBar.right
+//        anchors.top: leftBar.top
+//    }
+
+//    PageCookBook
+//    {
+//        anchors.left: leftBar.right
+//        anchors.top: leftBar.top
+//    }
+
+//    PageManuelBake
+//    {
+//        anchors.left: leftBar.right
+//        anchors.top: leftBar.top
+//    }
+
+//    PageRunning
+//    {
+//        anchors.left: leftBar.right
+//        anchors.top: leftBar.top
+//    }
+
+    PageManuelTimer
     {
         anchors.left: leftBar.right
-        anchors.top: leftBar.top
+        anchors.top:leftBar.top
     }
+
+//    PageManuelTemperature
+//    {
+//        anchors.left: leftBar.right
+//        anchors.top:leftBar.top
+//    }
 
     RightBar
     {
