@@ -35,7 +35,8 @@ SOURCES =+ \
     qml/pages/PageCookBook.qml \
     qml/pages/PageManuelBake.qml \
     qml/pages/PageRunning.qml \
-    qml/pages/PageManuelTimer.qml
+    qml/pages/PageManuelTimer.qml \
+    qml/pages/PageManuelTemperature.qml
 }
 
 DISTFILES += \

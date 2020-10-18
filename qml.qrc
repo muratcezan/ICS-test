@@ -41,5 +41,6 @@
         <file>qml/pages/PageCookBook.qml</file>
         <file>qml/pages/PageRunning.qml</file>
         <file>qml/pages/PageManuelTimer.qml</file>
+        <file>qml/pages/PageManuelTemperature.qml</file>
     </qresource>
 </RCC>
