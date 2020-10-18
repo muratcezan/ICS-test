@@ -1,4 +1,6 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.14
+import QtQuick.Controls.Styles 1.4
 
 import "../components"
 
@@ -26,6 +28,15 @@ Rectangle
         anchors.top: hdrPageCamPre.bottom
         color: "transparent"
 
+        ProgressBar
+        {
+            value:0.0
+            anchors.top: tempText.bottom
+            anchors.left: tempText.left
+            anchors.topMargin: 40
+            width: 820
+        }
+
         Text {
             id: tempText
             text: "425 F"
@@ -47,8 +58,6 @@ Rectangle
             font.bold: true
         }
     }
-
-
 
     Footer
     {
