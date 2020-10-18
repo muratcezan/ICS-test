@@ -34,5 +34,6 @@
         <file>qml/main.qml</file>
         <file>qml/pages/PageDefault.qml</file>
         <file>qml/components/Header.qml</file>
+        <file>qml/components/Footer.qml</file>
     </qresource>
 </RCC>

@@ -29,7 +29,8 @@ SOURCES =+ \
     qml/components/LeftBar.qml \
     qml/components/RightBar.qml \
     qml/pages/PageDefault.qml \
-    qml/components/Header.qml
+    qml/components/Header.qml \
+    qml/components/Footer.qml
 }
 
 DISTFILES += \
