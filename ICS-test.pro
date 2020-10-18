@@ -28,7 +28,8 @@ SOURCES =+ \
     qml/components/Button.qml \
     qml/components/LeftBar.qml \
     qml/components/RightBar.qml \
-    qml/pages/PageDefault.qml
+    qml/pages/PageDefault.qml \
+    qml/components/Header.qml
 }
 
 DISTFILES += \

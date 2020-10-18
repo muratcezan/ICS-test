@@ -33,5 +33,6 @@
         <file>qml/components/RightBar.qml</file>
         <file>qml/main.qml</file>
         <file>qml/pages/PageDefault.qml</file>
+        <file>qml/components/Header.qml</file>
     </qresource>
 </RCC>
