@@ -37,5 +37,6 @@
         <file>qml/components/Footer.qml</file>
         <file>qml/pages/PageCameraPreview.qml</file>
         <file>pics/other/duck.png</file>
+        <file>qml/pages/CookBook.qml</file>
     </qresource>
 </RCC>

@@ -31,7 +31,8 @@ SOURCES =+ \
     qml/pages/PageDefault.qml \
     qml/components/Header.qml \
     qml/components/Footer.qml \
-    qml/pages/PageCameraPreview.qml
+    qml/pages/PageCameraPreview.qml \
+    qml/pages/CookBook.qml
 }
 
 DISTFILES += \
