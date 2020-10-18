@@ -34,7 +34,8 @@ SOURCES =+ \
     qml/pages/PageCameraPreview.qml \
     qml/pages/PageCookBook.qml \
     qml/pages/PageManuelBake.qml \
-    qml/pages/PageRunning.qml
+    qml/pages/PageRunning.qml \
+    qml/pages/PageManuelTimer.qml
 }
 
 DISTFILES += \
