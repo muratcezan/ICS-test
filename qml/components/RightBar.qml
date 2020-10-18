@@ -29,8 +29,8 @@ Rectangle {
             Image {
                 id: wifiIcon
                 source: "qrc:/pics/wifi/wifi-line.png"
-                width: 110
-                height: 110
+                width: 50
+                height: 50
                 anchors.centerIn: parent
             }
         }
@@ -46,8 +46,8 @@ Rectangle {
             Image {
                 id: bluetoothIcon
                 source: "qrc:/pics/bluetooth/bluetooth-off.png"
-                width: 110
-                height: 110
+                width: 50
+                height: 50
                 anchors.centerIn: parent
             }
         }
