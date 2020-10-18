@@ -25,6 +25,8 @@ Rectangle{
             imgSource: "qrc:/pics/power/power-off.png"
             textVisible: false
             anchors.centerIn: parent
+            imgWidth: parent.width / 2
+            imgHeight: parent.width / 2
         }
     }
 
@@ -36,7 +38,7 @@ Rectangle{
         anchors.right: parent.right
         anchors.top: parent.top
 
-        // Oven icon
+        // Oven Button
         Rectangle {
             id: leftFirstIcon
             width: parent.width
@@ -45,17 +47,19 @@ Rectangle{
             anchors.left: parent.left
             color: "transparent"
 
-            Image {
-                id: ovenIcon
-                source: "qrc:/pics/oven/oven-line.png"
-                width: 110
-                height: 110
+            Button
+            {
+                buttonWitdh: parent.width
+                imgVisible: true
+                imgSource: "qrc:/pics/oven/oven-line.png"
+                textVisible: false
                 anchors.centerIn: parent
-
+                imgWidth: parent.width - 30
+                imgHeight: parent.width - 30
             }
         }
 
-        // Menu icon
+        // Menu Button
         Rectangle {
             id: leftSecondIcon
             width: parent.width
@@ -64,16 +68,19 @@ Rectangle{
             anchors.left: leftFirstIcon.left
             color: "transparent"
 
-            Image {
-                id: menuIcon
-                source: "qrc:/pics/menu/menu.png"
-                width: 90
-                height: 90
+            Button
+            {
+                buttonWitdh: parent.width
+                imgVisible: true
+                imgSource: "qrc:/pics/menu/menu.png"
+                textVisible: false
                 anchors.centerIn: parent
+                imgWidth: parent.width - 40
+                imgHeight: parent.width - 40
             }
         }
 
-        // More icon
+        // More Button
         Rectangle {
             id: leftThirdIcon
             width: parent.width
@@ -82,12 +89,15 @@ Rectangle{
             anchors.left: leftSecondIcon.left
             color: "transparent"
 
-            Image {
-                id: moreIcon
-                source: "qrc:/pics/more/more.png"
-                width: 90
-                height: 90
+            Button
+            {
+                buttonWitdh: parent.width
+                imgVisible: true
+                imgSource: "qrc:/pics/more/more.png"
+                textVisible: false
                 anchors.centerIn: parent
+                imgWidth: parent.width - 50
+                imgHeight: parent.width - 50
             }
         }
     }

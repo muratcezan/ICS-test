@@ -26,12 +26,15 @@ Rectangle {
             anchors.right: parent.right
             color: "transparent"
 
-            Image {
-                id: wifiIcon
-                source: "qrc:/pics/wifi/wifi-line.png"
-                width: 50
-                height: 50
+            Button
+            {
+                buttonWitdh: parent.width
+                imgVisible: true
+                imgSource: "qrc:/pics/wifi/wifi-line.png"
+                textVisible: false
                 anchors.centerIn: parent
+                imgWidth: parent.width - 200
+                imgHeight: parent.width - 200
             }
         }
         Rectangle {
@@ -43,12 +46,15 @@ Rectangle {
             anchors.right: wirelessArea.right
             color: "transparent"
 
-            Image {
-                id: bluetoothIcon
-                source: "qrc:/pics/bluetooth/bluetooth-off.png"
-                width: 50
-                height: 50
+            Button
+            {
+                buttonWitdh: parent.width
+                imgVisible: true
+                imgSource: "qrc:/pics/bluetooth/bluetooth-off.png"
+                textVisible: false
                 anchors.centerIn: parent
+                imgWidth: parent.width - 200
+                imgHeight: parent.width - 200
             }
         }
     }
@@ -70,14 +76,16 @@ Rectangle {
             anchors.left: parent.left
             color: "transparent"
 
-            Image {
-                id: lightIcon
-                source: "qrc:/pics/light/lightbulb-off.png"
-                width: 90
-                height: 90
+            Button
+            {
+                buttonWitdh: parent.width
+                imgVisible: true
+                imgSource: "qrc:/pics/light/lightbulb-off.png"
+                textVisible: false
                 anchors.centerIn: parent
+                imgWidth: parent.width - 40
+                imgHeight: parent.width - 40
             }
-
         }
 
         // Clock icon
@@ -89,14 +97,16 @@ Rectangle {
             anchors.left: leftFirstIcon.left
             color: "transparent"
 
-            Image {
-                id: alarmIcon
-                source: "qrc:/pics/alarm/alarm-clock-line.png"
-                width: 90
-                height: 90
+            Button
+            {
+                buttonWitdh: parent.width
+                imgVisible: true
+                imgSource: "qrc:/pics/alarm/alarm-clock-line.png"
+                textVisible: false
                 anchors.centerIn: parent
+                imgWidth: parent.width - 40
+                imgHeight: parent.width - 40
             }
-
         }
 
         // Settings icon
@@ -108,12 +118,15 @@ Rectangle {
             anchors.left: leftSecondIcon.left
             color: "transparent"
 
-            Image {
-                id: settingsIcon
-                source: "qrc:/pics/settings/settings.png"
-                width: 90
-                height: 90
+            Button
+            {
+                buttonWitdh: parent.width
+                imgVisible: true
+                imgSource: "qrc:/pics/settings/settings.png"
+                textVisible: false
                 anchors.centerIn: parent
+                imgWidth: parent.width - 60
+                imgHeight: parent.width - 60
             }
         }
     }
