@@ -36,7 +36,8 @@ SOURCES =+ \
     qml/pages/PageManuelBake.qml \
     qml/pages/PageRunning.qml \
     qml/pages/PageManuelTimer.qml \
-    qml/pages/PageManuelTemperature.qml
+    qml/pages/PageManuelTemperature.qml \
+    qml/components/SliderNew.qml
 }
 
 DISTFILES += \
@@ -59,6 +60,7 @@ DISTFILES += \
     pics/more/more-rgb.png \
     pics/more/more.png \
     pics/other/duck.png \
+    pics/other/triangle.png \
     pics/oven/oven-line.png \
     pics/oven/oven-rgb-line.png \
     pics/oven/oven-rgb.png \

@@ -42,5 +42,7 @@
         <file>qml/pages/PageRunning.qml</file>
         <file>qml/pages/PageManuelTimer.qml</file>
         <file>qml/pages/PageManuelTemperature.qml</file>
+        <file>qml/components/SliderNew.qml</file>
+        <file>pics/other/triangle.png</file>
     </qresource>
 </RCC>
