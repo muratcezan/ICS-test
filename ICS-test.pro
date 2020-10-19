@@ -1,4 +1,4 @@
-QT += quick
+QT += quick core
 
 CONFIG += c++11
 
@@ -7,6 +7,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        src/datacontroller.cpp \
         src/datainfo.cpp \
         src/main.cpp \
         src/mainwindow.cpp
@@ -76,5 +77,6 @@ DISTFILES += \
     pics/wifi/wifi-rgb.png
 
 HEADERS += \
+    hdr/datacontroller.h \
     hdr/datainfo.h \
     hdr/mainwindow.h
