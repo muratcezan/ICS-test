@@ -7,7 +7,8 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        src/main.cpp
+        src/main.cpp \
+        src/mainwindow.cpp
 
 RESOURCES += qml.qrc
 
@@ -72,3 +73,6 @@ DISTFILES += \
     pics/wifi/wifi-line.png \
     pics/wifi/wifi-rgb-line.png \
     pics/wifi/wifi-rgb.png
+
+HEADERS += \
+    hdr/mainwindow.h
