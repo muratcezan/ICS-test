@@ -16,7 +16,7 @@ Rectangle
 
         Text {
             id: dPageFirstItemText
-            text: "11:15 AM"
+            text: dataInfo.Time
             color: "white"
             anchors.bottom: parent.bottom
             anchors.horizontalCenter: parent.horizontalCenter
@@ -35,7 +35,7 @@ Rectangle
 
         Text {
             id: dPageSecondItemText
-            text: "Monday, June 18"
+            text: dataInfo.Date
             color: "white"
             anchors.top: parent.top
             anchors.horizontalCenter: parent.horizontalCenter

@@ -30,6 +30,18 @@ QString DataController::getCurrentTime()
     return sHr + ":" + sMin;
 }
 
+// Set current date
+QString DataController::getCurrentDate() {
+    QDateTime now = QDateTime::currentDateTime();
+    int dy = now.date().dayOfWeek();
+    int mnt = now.date().month();
+    int yr = now.date().year();
+    static QString month = now.date().shortMonthName(mnt);
+    static QString day = now.date().longDayName(dy);
+
+    return day + "," + month + " " + QString::number(yr);;
+}
+
 // Calculate temp from slider x position
 int DataController::getTemp(const int Temp)
 {
@@ -95,4 +107,6 @@ int DataController::getTemp(const int Temp)
         return 495;
     else if(Temp >= 800)
         return 500;
+    else
+        return 0;
 }

@@ -14,8 +14,12 @@ public:
     // Time
     QString getCurrentTime();
 
+    // Date
+    QString getCurrentDate();
+
     // Temp
     int getTemp(const int Temp);
+
 private:
 
 signals:

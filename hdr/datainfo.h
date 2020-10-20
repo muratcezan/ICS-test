@@ -28,6 +28,10 @@ public:
     void setTime(const QString Time);
     QString getTime();
 
+    // Date
+    void setDate(const QString Date);
+    QString getDate();
+
     // Temp
     void setTemp(const int Temp);
     int getTemp();
@@ -39,15 +43,14 @@ public:
     int getPageCameraZ();
     void setPageCookBookZ(const int zPos);
     int getSetPageCookBookZ();
-    void setManuelBakeZ(const int zPos);
-    int getManuelBakeZ();
+    void setPageManuelBakeZ(const int zPos);
+    int getPageManuelBakeZ();
     void setPageRunningZ(const int zPos);
     int getPageRunningZ();
     void setPageManuelTimerZ(const int zPos);
     int getPageManuelTimerZ();
     void setPageManuelTempZ(const int zPos);
     int getPageManuelTempZ();
-
 
 signals:
 

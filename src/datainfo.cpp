@@ -3,12 +3,13 @@
 const QString pStatus                        = QLatin1String("Status");
 const QString pTime                          = QLatin1String("Time");
 const QString pTemp                          = QLatin1String("Temp");
+const QString pDate                          = QLatin1String("Date");
 
 // Pages
 const QString pPageDefault                   = QLatin1String("PageDefaultZ");
 const QString pPageCamera                    = QLatin1String("PageCameraZ");
 const QString pPageCookBook                  = QLatin1String("ManuelCookBookZ");
-const QString pManuelBake                    = QLatin1String("ManuelBakeZ");
+const QString pPageManuelBake                = QLatin1String("PageManuelBakeZ");
 const QString pPageRunning                   = QLatin1String("PageRunningZ");
 const QString pPageManuelTimer               = QLatin1String("PageManuelTimerZ");
 const QString pPageManuelTemp                = QLatin1String("PageManuelTempZ");
@@ -19,6 +20,8 @@ DataInfo::DataInfo(QObject *parent) : QObject(parent),
 {
     setStatus("Ready");
     setTime(dataController->getCurrentTime());
+    setDate(dataController->getCurrentDate());
+
     setTemp(425);
 
     setPageDefaultZ(3);
@@ -27,6 +30,8 @@ DataInfo::DataInfo(QObject *parent) : QObject(parent),
     setPageRunningZ(0);
     setPageManuelTimerZ(0);
     setPageManuelTempZ(0);
+    setPageManuelBakeZ(0);
+
 }
 
 // Status
@@ -43,6 +48,14 @@ void DataInfo::setTime(const QString Time){
 }
 QString DataInfo::getTime(){
     return dataItem->value(pTime).toString();
+}
+
+// Date
+void DataInfo::setDate(const QString Date){
+    dataItem->insert(pDate,Date);
+}
+QString DataInfo::getDate(){
+    return dataItem->value(pDate).toString();
 }
 
 // Temp
@@ -78,11 +91,11 @@ void DataInfo::setPageRunningZ(const int zPos){
 int DataInfo::getPageRunningZ(){
     return dataItem->value(pPageRunning).toInt();
 }
-void DataInfo::setManuelBakeZ(const int zPos){
-    dataItem->insert(pPageRunning,zPos);
+void DataInfo::setPageManuelBakeZ(const int zPos){
+    dataItem->insert(pPageManuelBake,zPos);
 }
-int DataInfo::getManuelBakeZ(){
-    return dataItem->value(pPageRunning).toInt();
+int DataInfo::getPageManuelBakeZ(){
+    return dataItem->value(pPageManuelBake).toInt();
 }
 void DataInfo::setPageManuelTimerZ(const int zPos){
     dataItem->insert(pPageManuelTimer,zPos);

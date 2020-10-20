@@ -40,7 +40,7 @@ Window {
     {
         anchors.left: leftBar.right
         anchors.top: leftBar.top
-        z: dataInfo.ManuelBakeZ
+        z: dataInfo.PageManuelBakeZ
     }
 
     PageRunning
