@@ -28,11 +28,31 @@ public:
     void setTime(const QString Time);
     QString getTime();
 
+    // Temp
+    void setTemp(const int Temp);
+    int getTemp();
 
+    // Pages
+    void setPageDefaultZ(const int zPos);
+    int getPageDefaultZ();
+    void setPageCameraZ(const int zPos);
+    int getPageCameraZ();
+    void setPageCookBookZ(const int zPos);
+    int getSetPageCookBookZ();
+    void setManuelBakeZ(const int zPos);
+    int getManuelBakeZ();
+    void setPageRunningZ(const int zPos);
+    int getPageRunningZ();
+    void setPageManuelTimerZ(const int zPos);
+    int getPageManuelTimerZ();
+    void setPageManuelTempZ(const int zPos);
+    int getPageManuelTempZ();
 
 
 signals:
 
+public slots:
+    void valueChanged(const QString &key, const QString &value);
 };
 
 #endif // DATAINFO_H

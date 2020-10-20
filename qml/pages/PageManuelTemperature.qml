@@ -63,6 +63,13 @@ Rectangle
                 txtBold: true
                 anchors.left: tempMenuButton.right
                 anchors.top: tempMenuButton.top
+
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked: {
+                        dataUpdate.valueChanged("swicth","manuel-temp,manuel-timer");
+                    }
+                }
             }
         }
 
@@ -76,7 +83,7 @@ Rectangle
 
             Text {
                 id: txtTemp
-                text: "425"
+                text: dataInfo.Temp
                 anchors.verticalCenter: parent.verticalCenter
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: "#33ff33"

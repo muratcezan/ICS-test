@@ -15,48 +15,54 @@ Window {
         id: leftBar
     }
 
-//    PageDefault
-//    {
-//        anchors.left: leftBar.right
-//        anchors.top: leftBar.top
-//    }
+    PageDefault
+    {
+        anchors.left: leftBar.right
+        anchors.top: leftBar.top
+        z: dataInfo.PageDefaultZ
+    }
 
-//    PageCameraPreview
-//    {
+    PageCameraPreview
+    {
+        anchors.left: leftBar.right
+        anchors.top: leftBar.top
+        z: dataInfo.PageCameraZ
+    }
 
-//        anchors.left: leftBar.right
-//        anchors.top: leftBar.top
-//    }
+    PageCookBook
+    {
+        anchors.left: leftBar.right
+        anchors.top: leftBar.top
+        z: dataInfo.ManuelCookBookZ
+    }
 
-//    PageCookBook
-//    {
-//        anchors.left: leftBar.right
-//        anchors.top: leftBar.top
-//    }
+    PageManuelBake
+    {
+        anchors.left: leftBar.right
+        anchors.top: leftBar.top
+        z: dataInfo.ManuelBakeZ
+    }
 
-//    PageManuelBake
-//    {
-//        anchors.left: leftBar.right
-//        anchors.top: leftBar.top
-//    }
-
-//    PageRunning
-//    {
-//        anchors.left: leftBar.right
-//        anchors.top: leftBar.top
-//    }
+    PageRunning
+    {
+        anchors.left: leftBar.right
+        anchors.top: leftBar.top
+        z: dataInfo.PageRunningZ
+    }
 
     PageManuelTimer
     {
         anchors.left: leftBar.right
         anchors.top:leftBar.top
+        z: dataInfo.PageManuelTimerZ
     }
 
-//    PageManuelTemperature
-//    {
-//        anchors.left: leftBar.right
-//        anchors.top:leftBar.top
-//    }
+    PageManuelTemperature
+    {
+        anchors.left: leftBar.right
+        anchors.top:leftBar.top
+        z: dataInfo.PageManuelTempZ
+    }
 
     RightBar
     {

@@ -30,7 +30,7 @@ Rectangle {
             drag.minimumX: 0
             drag.maximumX: parent.parent.width - 30
             onPositionChanged: {
-                console.log(triange.x);
+                dataUpdate.valueChanged("temp",triange.x);
             }
         }
     }

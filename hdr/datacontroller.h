@@ -11,8 +11,11 @@ class DataController : public QObject
 public:
     explicit DataController(QObject *parent = nullptr);
 
+    // Time
     QString getCurrentTime();
 
+    // Temp
+    int getTemp(const int Temp);
 private:
 
 signals:
