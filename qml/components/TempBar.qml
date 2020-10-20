@@ -1,10 +1,11 @@
 import QtQuick 2.0
 
 Rectangle {
-    property string bigLineColor    :               "black"
-    property string shortLineColor  :               "#cccccc"
-    property string textColor       :               "white"
-    property int textSize           :               18
+    property string bigLineColor        :               "black"
+    property string shortLineColor      :               "#cccccc"
+    property string textColor           :               "white"
+    property int textSize               :               18
+    property double whiteLineMargin     :               27.2
 
     id: tempBar
     width: parent.width - 60
@@ -83,7 +84,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineBlack1.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
         color: "#cccccc"
     }
     Rectangle {
@@ -92,7 +93,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray1.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -101,7 +102,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray2.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -110,7 +111,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray3.left
-        anchors.leftMargin: 68
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -119,7 +120,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray4.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: 2 * whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -128,7 +129,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray5.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -137,7 +138,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray6.left
-        anchors.leftMargin: 68
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -146,7 +147,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray7.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -155,7 +156,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray8.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: 2 * whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -164,7 +165,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray9.left
-        anchors.leftMargin: 68
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -173,7 +174,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray10.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -182,7 +183,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray11.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -191,7 +192,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray12.left
-        anchors.leftMargin: 68
+        anchors.leftMargin: 2 * whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -200,7 +201,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray13.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -209,7 +210,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray14.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -218,7 +219,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray15.left
-        anchors.leftMargin: 68
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -227,7 +228,7 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray16.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: 2 * whiteLineMargin
         color: shortLineColor
     }
     Rectangle {
@@ -236,7 +237,70 @@ Rectangle {
         width: 4
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: lineGray17.left
-        anchors.leftMargin: 34
+        anchors.leftMargin: whiteLineMargin
+        color: shortLineColor
+    }
+    Rectangle {
+        id:lineGray19
+        height: (2*parent.height) / 3
+        width: 4
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: lineGray17.left
+        anchors.leftMargin: whiteLineMargin
+        color: shortLineColor
+    }
+    Rectangle {
+        id:lineGray20
+        height: (2*parent.height) / 3
+        width: 4
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: lineGray19.left
+        anchors.leftMargin: whiteLineMargin
+        color: shortLineColor
+    }
+    Rectangle {
+        id:lineGray21
+        height: (2*parent.height) / 3
+        width: 4
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: lineGray20.left
+        anchors.leftMargin: whiteLineMargin
+        color: shortLineColor
+    }
+    Rectangle {
+        id:lineGray22
+        height: (2*parent.height) / 3
+        width: 4
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: lineGray21.left
+        anchors.leftMargin: 2 * whiteLineMargin
+        color: shortLineColor
+    }
+    Rectangle {
+        id:lineGray23
+        height: (2*parent.height) / 3
+        width: 4
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: lineGray22.left
+        anchors.leftMargin: whiteLineMargin
+        color: shortLineColor
+    }
+    Rectangle {
+        id:lineGray24
+        height: (2*parent.height) / 3
+        width: 4
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: lineGray23.left
+        anchors.leftMargin: whiteLineMargin
+        color: shortLineColor
+    }
+    Rectangle {
+        id:lineGray25
+        height: (2*parent.height) / 3
+        width: 4
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: lineGray24.left
+        anchors.leftMargin: whiteLineMargin
         color: shortLineColor
     }
     Text {
