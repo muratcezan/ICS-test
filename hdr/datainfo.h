@@ -3,8 +3,11 @@
 
 #include <QObject>
 #include <QQmlPropertyMap>
+#include <QThread>
+#include <QTimer>
 #include <QString>
 #include <QDebug>
+
 
 #include "hdr/datacontroller.h"
 
@@ -12,50 +15,44 @@ class DataInfo : public QObject
 {
     Q_OBJECT
 
-private:
-    QQmlPropertyMap *dataItem;
-    DataController *dataController;
+    Q_PROPERTY(QString currentTime READ currentTime WRITE setCurrentTime NOTIFY currentTimeChanged)
+    Q_PROPERTY(QString currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
+    Q_PROPERTY(QDateTime dateTime READ dateTime WRITE setDateTime NOTIFY dateTimeChanged)
+
+
 public:
     explicit DataInfo(QObject *parent = nullptr);
 
-    QQmlPropertyMap *GetData() const { return dataItem; }
+    // Current time
+    void setCurrentTime(QString currentTime);
+    QString currentTime() const;
 
-    // Status
-    void setStatus(const QString Status);
-    QString getStatus();
+    // Current date
+    void setCurrentDate(QString currentDate);
+    QString currentDate() const;
 
-    // Time
-    void setTime(const QString Time);
-    QString getTime();
+    // Current date
+    void setDateTime(QString currentDate);
+    QString dateTime() const;
 
-    // Date
-    void setDate(const QString Date);
-    QString getDate();
 
-    // Temp
-    void setTemp(const int Temp);
-    int getTemp();
 
-    // Pages
-    void setPageDefaultZ(const int zPos);
-    int getPageDefaultZ();
-    void setPageCameraZ(const int zPos);
-    int getPageCameraZ();
-    void setPageCookBookZ(const int zPos);
-    int getSetPageCookBookZ();
-    void setPageManuelBakeZ(const int zPos);
-    int getPageManuelBakeZ();
-    void setPageRunningZ(const int zPos);
-    int getPageRunningZ();
-    void setPageManuelTimerZ(const int zPos);
-    int getPageManuelTimerZ();
-    void setPageManuelTempZ(const int zPos);
-    int getPageManuelTempZ();
+
+private:
+    // Data Controller Object
+    DataController *dataController;
+
+    QString m_currentTime;
+    QString m_currentDate;
+
+    QDateTime m_dateTime;
 
 signals:
+    void currentTimeChanged(QString);
+    void currentDateChanged(QString);
 
-public slots:
-    void valueChanged(const QString &key, const QString &value);
+    void dateTimeChanged(QDateTime);
+
 };
 
 #endif // DATAINFO_H

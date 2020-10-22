@@ -26,10 +26,6 @@ Component{
                 font.pixelSize: 120
                 font.bold: true
 
-                Component.onCompleted:
-                {
-                    dPageFirstItemText.text = dInfo.currentTime
-                }
             }
         }
 

@@ -134,6 +134,13 @@ Component
             firstButtonVisible: true
             firstButtonText: "Next"
             z:3
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                        myLoader.sourceComponent = pManTimer
+                }
+            }
         }
     }
 }

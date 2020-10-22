@@ -10,7 +10,8 @@ SOURCES += \
         src/datacontroller.cpp \
         src/datainfo.cpp \
         src/main.cpp \
-        src/mainwindow.cpp
+        src/mainwindow.cpp \
+        src/mythread.cpp
 
 RESOURCES += qml.qrc
 
@@ -79,4 +80,5 @@ DISTFILES += \
 HEADERS += \
     hdr/datacontroller.h \
     hdr/datainfo.h \
-    hdr/mainwindow.h
+    hdr/mainwindow.h \
+    hdr/mythread.h

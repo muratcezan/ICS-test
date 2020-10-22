@@ -1,6 +1,8 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 
+import com.ics.datainfo 1.0
+
 import "components"
 import "pages"
 
@@ -8,7 +10,7 @@ Window {
     width: 1600
     height: 450
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("ICS-Test")
 
     Loader {
         id: myLoader
@@ -17,6 +19,10 @@ Window {
         anchors.left: leftBar.right
         anchors.top: leftBar.top
         sourceComponent: pDefault
+    }
+
+    DtInfo {
+        id: dInfo
     }
 
     LeftBar

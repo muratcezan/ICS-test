@@ -25,7 +25,7 @@ Rectangle{
             buttonWitdh: parent.width / 2
             buttonHeight: parent.width / 2
             imgVisible: true
-            imgSource: "qrc:/pics/power/power-off.png"
+            imgSource: "qrc:/pics/power/power-on.png"
             textVisible: false
             anchors.centerIn: parent
             imgWidth: parent.width / 2
@@ -34,14 +34,8 @@ Rectangle{
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-//                    if(myLoader.source == ""){
-//                        myLoader.sourceComponent = null
-                        myLoader.sourceComponent = pRunning //"qrc:/qml/pages/PageCameraPreview.qml"
-//                    }
-//                    else{
-//                        myLoader.source = ""
-//                        myLoader.sourceComponent = id_myText
-//                    }
+//                        myLoader.sourceComponent = pRunning
+                    // Start the Oven
                 }
             }
         }

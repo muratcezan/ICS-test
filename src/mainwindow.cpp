@@ -2,15 +2,7 @@
 
 MainWindow::MainWindow(QQmlApplicationEngine *engine,QObject *parent) : QObject(parent)
 {
-
-    dataInfo = new DataInfo;
-
-    ctx = engine->rootContext();
-    ctx_update = engine->rootContext();
-    ctx->setContextProperty("dataInfo", dataInfo->GetData());
-    ctx->setContextProperty("dataUpdate",dataInfo);
-
-    qmlRegisterType<DataInfo>("com.ics.datainfo",1,0,"dataInfo");
+    qmlRegisterType<DataInfo>("com.ics.datainfo",1,0,"DtInfo");
 
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
     engine->load(url);

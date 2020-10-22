@@ -14,10 +14,6 @@ class MainWindow : public QObject
 public:
     explicit MainWindow(QQmlApplicationEngine *engine, QObject *parent = nullptr);
 
-    QQmlContext *ctx;
-    QQmlContext *ctx_update;
-    DataInfo *dataInfo;
-
 signals:
 
 };
