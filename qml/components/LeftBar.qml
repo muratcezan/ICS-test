@@ -30,6 +30,20 @@ Rectangle{
             anchors.centerIn: parent
             imgWidth: parent.width / 2
             imgHeight: parent.width / 2
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+//                    if(myLoader.source == ""){
+//                        myLoader.sourceComponent = null
+                        myLoader.sourceComponent = pRunning //"qrc:/qml/pages/PageCameraPreview.qml"
+//                    }
+//                    else{
+//                        myLoader.source = ""
+//                        myLoader.sourceComponent = id_myText
+//                    }
+                }
+            }
         }
     }
 
@@ -60,6 +74,21 @@ Rectangle{
                 anchors.centerIn: parent
                 imgWidth: parent.width - 30
                 imgHeight: parent.width - 30
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+//                        if(myLoader.source == ""){
+                            myLoader.sourceComponent = pDefault
+
+//                            myLoader.source = api.pageCookBook //"qrc:/qml/pages/PageCameraPreview.qml"
+//                        }
+//                        else{
+//                            myLoader.source = ""
+//                            myLoader.sourceComponent = id_myText
+//                        }
+                    }
+                }
             }
         }
 
@@ -82,6 +111,21 @@ Rectangle{
                 anchors.centerIn: parent
                 imgWidth: parent.width - 40
                 imgHeight: parent.width - 40
+
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+//                        if(myLoader.source == ""){
+                            myLoader.sourceComponent = pCook
+
+//                            myLoader.source = api.pageCookBook //"qrc:/qml/pages/PageCameraPreview.qml"
+//                        }
+//                        else{
+//                            myLoader.source = ""
+//                            myLoader.sourceComponent = id_myText
+//                        }
+                    }
+                }
             }
         }
 
@@ -104,6 +148,12 @@ Rectangle{
                 anchors.centerIn: parent
                 imgWidth: parent.width - 50
                 imgHeight: parent.width - 50
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                            myLoader.sourceComponent = pManuelBake
+                    }
+                }
             }
         }
     }

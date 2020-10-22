@@ -19,7 +19,7 @@ Rectangle {
         anchors.right: parent.right
         anchors.top: parent.top
 
-        // Power button
+        // Wireless button
         Rectangle {
             id: wirelessArea
             width: parent.width
@@ -40,6 +40,8 @@ Rectangle {
                 imgHeight: parent.width - 200
             }
         }
+
+        // Bluetooth button
         Rectangle {
             id: bluetoothArea
             width: parent.width
@@ -134,6 +136,14 @@ Rectangle {
                 anchors.centerIn: parent
                 imgWidth: parent.width - 60
                 imgHeight: parent.width - 60
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+    //                    if(myLoader.source == ""){
+    //                        myLoader.sourceComponent = null
+                            myLoader.sourceComponent = pManTemp
+                    }
+                }
             }
         }
     }

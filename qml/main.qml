@@ -10,6 +10,15 @@ Window {
     visible: true
     title: qsTr("Hello World")
 
+    Loader {
+        id: myLoader
+        width: 880
+        height: 450
+        anchors.left: leftBar.right
+        anchors.top: leftBar.top
+        sourceComponent: pDefault
+    }
+
     LeftBar
     {
         id: leftBar
@@ -17,51 +26,37 @@ Window {
 
     PageDefault
     {
-        anchors.left: leftBar.right
-        anchors.top: leftBar.top
-        z: dataInfo.PageDefaultZ
+        id: pDefault
     }
 
     PageCameraPreview
     {
-        anchors.left: leftBar.right
-        anchors.top: leftBar.top
-        z: dataInfo.PageCameraZ
+        id:pCamPre
     }
 
     PageCookBook
     {
-        anchors.left: leftBar.right
-        anchors.top: leftBar.top
-        z: dataInfo.ManuelCookBookZ
+        id: pCook
     }
 
     PageManuelBake
     {
-        anchors.left: leftBar.right
-        anchors.top: leftBar.top
-        z: dataInfo.PageManuelBakeZ
+        id: pManuelBake
     }
 
     PageRunning
     {
-        anchors.left: leftBar.right
-        anchors.top: leftBar.top
-        z: dataInfo.PageRunningZ
+        id: pRunning
     }
 
     PageManuelTimer
     {
-        anchors.left: leftBar.right
-        anchors.top:leftBar.top
-        z: dataInfo.PageManuelTimerZ
+        id: pManTimer
     }
 
     PageManuelTemperature
     {
-        anchors.left: leftBar.right
-        anchors.top:leftBar.top
-        z: dataInfo.PageManuelTempZ
+        id: pManTemp
     }
 
     RightBar
