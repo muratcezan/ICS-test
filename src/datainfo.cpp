@@ -10,7 +10,7 @@ DataInfo::DataInfo(QObject *parent) : QObject(parent),
     setTriPos(1);
 
     timer_ls = new QTimer(this);
-    QObject::connect(timer_ls,SIGNAL(timeout), this, SLOT(UpdateTime()));
+    QObject::connect(timer_ls,SIGNAL(timeout()), this, SLOT(UpdateTime()));
     timer_ls->start(1000);
 
     setCurrentTime(QTime::currentTime().toString("hh:mm"));
@@ -72,4 +72,7 @@ QString DataInfo::status() const
     return m_status;
 }
 
-
+void DataInfo::UpdateTime()
+{
+   emit setCurrentTime(QTime::currentTime().toString("hh:mm"));
+}
