@@ -1,5 +1,7 @@
 #include "../hdr/datacontroller.h"
 
+#include <QDebug>
+
 DataController::DataController(QObject *parent) : QObject(parent)
 {
 
@@ -36,10 +38,11 @@ QString DataController::getCurrentDate() {
     int dy = now.date().dayOfWeek();
     int mnt = now.date().month();
     int yr = now.date().year();
-    static QString month = now.date().shortMonthName(mnt);
-    static QString day = now.date().longDayName(dy);
+    QLocale lc;
+    QString month = lc.standaloneMonthName(mnt,lc.ShortFormat);
+    QString day = lc.standaloneDayName(dy);
 
-    return day + "," + month + " " + QString::number(yr);;
+    return day + "," + month + " " + QString::number(yr);
 }
 
 // Calculate temp from slider x position

@@ -1,8 +1,7 @@
 import QtQuick 2.0
 
-Component{
-
-
+Component
+{
     Rectangle
     {
         width: 880
@@ -26,10 +25,6 @@ Component{
                 font.pixelSize: 120
                 font.bold: true
 
-                Component.onCompleted:
-                {
-                    dPageFirstItemText.text = dInfo.currentTime
-                }
             }
         }
 

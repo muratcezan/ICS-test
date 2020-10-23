@@ -86,7 +86,7 @@ Component
 
                 Text {
                     id: txtTemp
-                    text: dataInfo.Temp
+                    text: dInfo.temp
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.horizontalCenter: parent.horizontalCenter
                     color: "#33ff33"

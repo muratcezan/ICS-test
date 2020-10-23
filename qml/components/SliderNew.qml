@@ -21,7 +21,7 @@ Rectangle {
         source: "qrc:/pics/other/triangle.png"
         width: 30
         height: 30
-        x:405; y:1
+        x:dInfo.triPos; y:1
 
         MouseArea {
             anchors.fill: parent
@@ -30,7 +30,7 @@ Rectangle {
             drag.minimumX: 0
             drag.maximumX: parent.parent.width - 30
             onPositionChanged: {
-                dataUpdate.valueChanged("temp",triange.x);
+                dInfo.setTemp(triange.x.toString());
             }
         }
     }

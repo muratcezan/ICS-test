@@ -21,8 +21,19 @@ Window {
         sourceComponent: pDefault
     }
 
-    DtInfo {
+    DataInfo
+    {
         id: dInfo
+
+        onCurrentTimeChanged:
+        {
+
+        }
+
+        onCurrentDateChanged:
+        {
+
+        }
     }
 
     LeftBar

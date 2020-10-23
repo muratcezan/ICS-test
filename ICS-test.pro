@@ -11,7 +11,7 @@ SOURCES += \
         src/datainfo.cpp \
         src/main.cpp \
         src/mainwindow.cpp \
-        src/mythread.cpp
+        src/worker.cpp
 
 RESOURCES += qml.qrc
 
@@ -81,4 +81,4 @@ HEADERS += \
     hdr/datacontroller.h \
     hdr/datainfo.h \
     hdr/mainwindow.h \
-    hdr/mythread.h
+    hdr/worker.h

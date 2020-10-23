@@ -2,8 +2,7 @@
 
 MainWindow::MainWindow(QQmlApplicationEngine *engine,QObject *parent) : QObject(parent)
 {
-    qmlRegisterType<DataInfo>("com.ics.datainfo",1,0,"DtInfo");
-
+    qmlRegisterType<DataInfo>("com.ics.datainfo",1,0,"DataInfo");
     const QUrl url(QStringLiteral("qrc:/qml/main.qml"));
     engine->load(url);
 }

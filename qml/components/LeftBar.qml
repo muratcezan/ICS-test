@@ -60,6 +60,7 @@ Rectangle{
 
             Button
             {
+                id: btnOven
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
@@ -72,21 +73,21 @@ Rectangle{
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-//                        if(myLoader.source == ""){
-                            myLoader.sourceComponent = pDefault
+                        myLoader.sourceComponent = pDefault
+                    }
 
-//                            myLoader.source = api.pageCookBook //"qrc:/qml/pages/PageCameraPreview.qml"
-//                        }
-//                        else{
-//                            myLoader.source = ""
-//                            myLoader.sourceComponent = id_myText
-//                        }
+                    onPressed: {
+                        btnOven.imgSource= "qrc:/pics/oven/oven-rgb-line.png"
+                    }
+
+                    onReleased: {
+                        btnOven.imgSource= "qrc:/pics/oven/oven-line.png"
                     }
                 }
             }
         }
 
-        // Menu Button
+        // CookBook Button
         Rectangle {
             id: leftSecondIcon
             width: parent.width
@@ -97,6 +98,7 @@ Rectangle{
 
             Button
             {
+                id: cookBookBtn
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
@@ -109,16 +111,11 @@ Rectangle{
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-//                        if(myLoader.source == ""){
-                            myLoader.sourceComponent = pCook
-
-//                            myLoader.source = api.pageCookBook //"qrc:/qml/pages/PageCameraPreview.qml"
-//                        }
-//                        else{
-//                            myLoader.source = ""
-//                            myLoader.sourceComponent = id_myText
-//                        }
+                        myLoader.sourceComponent = pCook
                     }
+
+                    onPressed: cookBookBtn.imgSource = "qrc:/pics/menu/menu-rgb.png";
+                    onReleased: cookBookBtn.imgSource = "qrc:/pics/menu/menu.png";
                 }
             }
         }

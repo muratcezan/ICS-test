@@ -3,7 +3,6 @@
 
 #include <QObject>
 #include <QQmlApplicationEngine>
-#include <QQmlContext>
 #include <QDebug>
 
 #include "hdr/datainfo.h"

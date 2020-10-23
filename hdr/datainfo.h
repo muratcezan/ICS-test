@@ -1,15 +1,14 @@
 #ifndef DATAINFO_H
 #define DATAINFO_H
 
-#include <QObject>
-#include <QQmlPropertyMap>
-#include <QThread>
-#include <QTimer>
-#include <QString>
+#include <QDateTime>
 #include <QDebug>
+#include <QObject>
+#include <QString>
+#include <QTimer>
+#include <QTime>
 
-
-#include "hdr/datacontroller.h"
+#include "datacontroller.h"
 
 class DataInfo : public QObject
 {
@@ -17,42 +16,59 @@ class DataInfo : public QObject
 
     Q_PROPERTY(QString currentTime READ currentTime WRITE setCurrentTime NOTIFY currentTimeChanged)
     Q_PROPERTY(QString currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
-    Q_PROPERTY(QDateTime dateTime READ dateTime WRITE setDateTime NOTIFY dateTimeChanged)
 
+    Q_PROPERTY(QString temp READ temp WRITE setTemp NOTIFY tempChanged)
+    Q_PROPERTY(int triPos READ triPos WRITE setTriPos NOTIFY triPosChanged)
+    Q_PROPERTY(QString status READ status WRITE setStatus NOTIFY statusChanged)
 
 public:
     explicit DataInfo(QObject *parent = nullptr);
 
+    QString currentTime() const;
+    QString currentDate() const;
+
+    QString temp() const;
+    QString status() const;
+    int triPos() const;
+
+
+public slots:
     // Current time
     void setCurrentTime(QString currentTime);
-    QString currentTime() const;
 
     // Current date
     void setCurrentDate(QString currentDate);
-    QString currentDate() const;
 
-    // Current date
-    void setDateTime(QString currentDate);
-    QString dateTime() const;
+    // Temp
+    void setTemp(QString temp);
 
+    // Status
+    void setStatus(QString status);
 
-
+    void setTriPos(int pos);
 
 private:
     // Data Controller Object
     DataController *dataController;
+    QTimer *timer_ls;
 
     QString m_currentTime;
     QString m_currentDate;
 
-    QDateTime m_dateTime;
+    QString m_temp;
+    QString m_status;
+    int m_tripos;
 
 signals:
     void currentTimeChanged(QString);
     void currentDateChanged(QString);
 
-    void dateTimeChanged(QDateTime);
+    void tempChanged(QString);
+    void statusChanged(QString);
+    void triPosChanged(int);
 
+private slots:
+    void UpdateTime();
 };
 
 #endif // DATAINFO_H

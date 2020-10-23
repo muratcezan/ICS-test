@@ -1,9 +1,9 @@
 #ifndef DATACONTROLLER_H
 #define DATACONTROLLER_H
 
+#include <QDateTime>
 #include <QObject>
 #include <QString>
-#include <QDateTime>
 
 class DataController : public QObject
 {
@@ -11,6 +11,7 @@ class DataController : public QObject
 public:
     explicit DataController(QObject *parent = nullptr);
 
+public slots:
     // Time
     QString getCurrentTime();
 

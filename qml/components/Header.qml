@@ -10,7 +10,7 @@ Rectangle
 
     Text {
         id: statusText
-        text: dataInfo.Status
+        text: dInfo.status
         color: "white"
         font.pixelSize: 30
         anchors.left: parent.left
@@ -20,7 +20,7 @@ Rectangle
 
     Text {
         id: statusTime
-        text: dataInfo.Time
+        text: dInfo.currentTime
         color: "white"
         font.pixelSize: 30
         anchors.right: parent.right
