@@ -45,5 +45,7 @@
         <file>qml/components/SliderNew.qml</file>
         <file>pics/other/triangle.png</file>
         <file>qml/components/TempBar.qml</file>
+        <file>js/functionList.js</file>
+        <file>qml/Api.qml</file>
     </qresource>
 </RCC>

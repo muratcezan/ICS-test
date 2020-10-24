@@ -10,7 +10,7 @@ Rectangle
 
     Text {
         id: statusText
-        text: dInfo.status
+        text: (dInfo.ovenStatus == true) ? "Running" : "Ready"
         color: "white"
         font.pixelSize: 30
         anchors.left: parent.left

@@ -25,7 +25,7 @@ Rectangle{
             buttonWitdh: parent.width / 2
             buttonHeight: parent.width / 2
             imgVisible: true
-            imgSource: "qrc:/pics/power/power-on.png"
+            imgSource: api.ovenPower ? "qrc:/pics/power/power-on.png": "qrc:/pics/power/power-off.png"
             textVisible: false
             anchors.centerIn: parent
             imgWidth: parent.width / 2
@@ -34,8 +34,11 @@ Rectangle{
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-//                        myLoader.sourceComponent = pRunning
                     // Start the Oven
+                    if(api.ovenPower)
+                        api.ovenPower = false;
+                    else
+                        api.ovenPower = true;
                 }
             }
         }
@@ -73,7 +76,8 @@ Rectangle{
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        myLoader.sourceComponent = pDefault
+                        if(api.ovenPower)
+                            myLoader.sourceComponent = pRunning
                     }
 
                     onPressed: {
@@ -111,7 +115,8 @@ Rectangle{
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-                        myLoader.sourceComponent = pCook
+                        if(api.ovenPower)
+                            myLoader.sourceComponent = pCook
                     }
 
                     onPressed: cookBookBtn.imgSource = "qrc:/pics/menu/menu-rgb.png";
@@ -142,6 +147,7 @@ Rectangle{
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
+                        if(api.ovenPower)
                             myLoader.sourceComponent = pManuelBake
                     }
                 }

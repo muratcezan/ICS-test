@@ -9,6 +9,7 @@ Component
         width: 880
         height: parent.height
         color: "#333333"
+        visible: api.ovenPower ? true : false
 
         Header
         {
@@ -22,12 +23,13 @@ Component
 
         Rectangle
         {
+            id: opaCam
             width: parent.width
             height: ( 4 * parent.height)/6
             anchors.left: hdrPageCamPre.left
             anchors.top: hdrPageCamPre.bottom
             color: "black"
-            opacity: 0.8
+            opacity: api.lightOven ? 0.8 : 1.0
             z:2
         }
 
@@ -51,7 +53,7 @@ Component
             firstButtonWidth: 100
             firstButtonHeight: 30
             firstButtonVisible: true
-            firstButtonText: "Cancel"
+            firstButtonText: (dInfo.ovenStatus == true) ? "STOP" : "START"
             secondButtonWidth: 30
             secondButtonHeight: 30
             secondButtonVisible: true

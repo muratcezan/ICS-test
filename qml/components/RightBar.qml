@@ -87,11 +87,23 @@ Rectangle {
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
-                imgSource: "qrc:/pics/light/lightbulb-off.png"
+                imgSource: api.lightOven ? "qrc:/pics/light/lightbulb-on.png" : "qrc:/pics/light/lightbulb-off.png"
                 textVisible: false
                 anchors.centerIn: parent
                 imgWidth: parent.width - 40
                 imgHeight: parent.width - 40
+
+                MouseArea{
+                    anchors.fill: parent
+                    onClicked: {
+                        if(api.ovenPower){
+                            if(api.lightOven)
+                                api.lightOven = false
+                            else
+                                api.lightOven = true
+                        }
+                    }
+                }
             }
         }
 
@@ -109,7 +121,7 @@ Rectangle {
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
-                imgSource: "qrc:/pics/alarm/alarm-clock-line.png"
+                imgSource: ((api.alarmValue < 5) && (api.ovenStatus)) ? "qrc:/pics/alarm/alarm-clock-rgb-line.png" :"qrc:/pics/alarm/alarm-clock-line.png"
                 textVisible: false
                 anchors.centerIn: parent
                 imgWidth: parent.width - 40
@@ -139,9 +151,13 @@ Rectangle {
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
-    //                    if(myLoader.source == ""){
-    //                        myLoader.sourceComponent = null
-                            myLoader.sourceComponent = pManTemp
+                        if(api.ovenPower)
+                        {
+                            if(api.ovenStatus)
+                                myLoader.sourceComponent = pRunning;
+                            else
+                                myLoader.sourceComponent = pManTemp;
+                        }
                     }
                 }
             }

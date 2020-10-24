@@ -7,6 +7,7 @@ Component
         width: 880
         height: parent.height
         color:"#333333"
+        visible: api.ovenPower ? true : false
 
         Rectangle {
             id: dPageFirstItem

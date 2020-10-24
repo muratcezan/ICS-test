@@ -10,6 +10,7 @@ Component
         width: 880
         height: parent.height
         color: "#333333"
+        visible: api.ovenPower ? true : false
 
         Header
         {
@@ -31,7 +32,7 @@ Component
 
             ProgressBar
             {
-                value:0.0
+                value:progressBarValue
                 anchors.top: tempText.bottom
                 anchors.left: tempText.left
                 anchors.topMargin: 40
@@ -40,7 +41,7 @@ Component
 
             Text {
                 id: tempText
-                text: "425\xB0F"
+                text: api.temperature + "\xB0F"
                 anchors.left: parent.left
                 anchors.bottom: parent.bottom
                 anchors.leftMargin: 30
@@ -50,7 +51,7 @@ Component
             }
             Text {
                 id: timerText
-                text: "01:30"
+                text: api.chronoHrFirstDigit + api.chronoHrSecondDigit + ":" + api.chronoMnFirstDigit + api.chronoMnSecondDigit
                 anchors.right: parent.right
                 anchors.bottom: tempText.bottom
                 anchors.rightMargin: 30
@@ -70,7 +71,7 @@ Component
             firstButtonWidth: 100
             firstButtonHeight: 30
             firstButtonVisible: true
-            firstButtonText: "Cancel"
+            firstButtonText: (dInfo.ovenStatus == true) ? "STOP" : "START"
             secondButtonWidth: 30
             secondButtonHeight: 30
             secondButtonVisible: true

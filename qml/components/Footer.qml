@@ -37,6 +37,11 @@ Rectangle
         anchors.right: parent.right
         anchors.rightMargin: 20
         visible: firstButtonVisible
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: firstButtonEvent();
+        }
     }
 
     // Image button
@@ -56,5 +61,42 @@ Rectangle
         anchors.right: firstButton.left
         anchors.rightMargin: 20
         visible: secondButtonVisible
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: secondButtonEvent();
+        }
+    }
+
+    function firstButtonEvent()
+    {
+        if(myLoader.sourceComponent == pManTemp) {
+            myLoader.sourceComponent = pManTimer;
+        }
+        else if(myLoader.sourceComponent == pManTimer) {
+            myLoader.sourceComponent = pRunning;
+            if(!dInfo.ovenStatus)
+                this.firstButtonText = "STOP"
+            else
+                this.firstButtonText = "START"
+        }
+        else if(myLoader.sourceComponent == pRunning || myLoader.sourceComponent == pCamPre) {
+            if(!dInfo.ovenStatus){
+                this.firstButtonText = "STOP"
+                dInfo.ovenStatus = true;
+            }
+            else{
+                this.firstButtonText = "START"
+                dInfo.ovenStatus = false;
+            }
+        }
+    }
+
+    function secondButtonEvent()
+    {
+        if(myLoader.sourceComponent == pRunning)
+            myLoader.sourceComponent = pCamPre;
+        else
+            myLoader.sourceComponent = pRunning;
     }
 }

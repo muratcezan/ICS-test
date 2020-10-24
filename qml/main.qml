@@ -11,6 +11,7 @@ Window {
     height: 450
     visible: true
     title: qsTr("ICS-Test")
+    color: "#333333"
 
     Loader {
         id: myLoader
@@ -24,16 +25,10 @@ Window {
     DataInfo
     {
         id: dInfo
+    }
 
-        onCurrentTimeChanged:
-        {
-
-        }
-
-        onCurrentDateChanged:
-        {
-
-        }
+    Api{
+        id:api
     }
 
     LeftBar

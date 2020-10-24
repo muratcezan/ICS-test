@@ -2,9 +2,11 @@ QT += quick core
 
 CONFIG += c++11
 
-# You can make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+HEADERS += \
+    hdr/datacontroller.h \
+    hdr/datainfo.h \
+    hdr/mainwindow.h \
+    hdr/worker.h
 
 SOURCES += \
         src/datacontroller.cpp \
@@ -15,18 +17,8 @@ SOURCES += \
 
 RESOURCES += qml.qrc
 
-# Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
-
-# Additional import path used to resolve QML modules just for Qt Quick Designer
-QML_DESIGNER_IMPORT_PATH =
-
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
-
 lupdate_only {
+# QML Files
 SOURCES =+ \
     qml/main.qml \
     qml/components/Button.qml \
@@ -42,9 +34,11 @@ SOURCES =+ \
     qml/pages/PageManuelTimer.qml \
     qml/pages/PageManuelTemperature.qml \
     qml/components/SliderNew.qml \
-    qml/components/TempBar.qml
-}
+    qml/components/TempBar.qml \
+    qml/Api.qml \
+    js/functionList.js
 
+}
 DISTFILES += \
     pics/alarm/alarm-clock-emp-line.png \
     pics/alarm/alarm-clock-line.png \
@@ -77,8 +71,3 @@ DISTFILES += \
     pics/wifi/wifi-rgb-line.png \
     pics/wifi/wifi-rgb.png
 
-HEADERS += \
-    hdr/datacontroller.h \
-    hdr/datainfo.h \
-    hdr/mainwindow.h \
-    hdr/worker.h

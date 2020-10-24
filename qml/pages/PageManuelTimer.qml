@@ -1,28 +1,41 @@
 import QtQuick 2.0
 
 import "../components"
+import "../../js/functionList.js" as Func
+
 Component
 {
     Rectangle
     {
         // Number buttons properties
-        property int numBtnSize         :           60              // Number buttons size
-        property int numBtnRadius       :           numBtnSize/2    // Number buttons radius
-        property string numBtnColor     :           "#4d4d4d"       // Number buttons color
-        property int numBtnTxtSize      :           30              // Number buttons text size
-        property int numBtnMargin       :           10              // Number buttons margin
-        property bool numBtnTxtVisible  :           true            // Number buttons text visible
-        property int numBtnBorder       :           2               // Number buttons border size
-        property bool numBtnTxtBold     :           true            // Number buttons text bold
+        property int numBtnSize         : 60              // Number buttons size
+        property int numBtnRadius       : numBtnSize/2    // Number buttons radius
+        property string numBtnColor     : "#4d4d4d"       // Number buttons color
+        property int numBtnTxtSize      : 30              // Number buttons text size
+        property int numBtnMargin       : 10              // Number buttons margin
+        property bool numBtnTxtVisible  : true            // Number buttons text visible
+        property int numBtnBorder       : 2               // Number buttons border size
+        property bool numBtnTxtBold     : true            // Number buttons text bold
 
         // Timer text properties
-        property int txtSize            :           50              // Timer text size
-        property string txtColor        :           "#33ff33"       // Timer text color
-        property bool txtBold           :           true            // Timer text bold
+        property int txtSize            : 50              // Timer text size
+        property string txtColor        : "#33ff33"       // Timer text color
+        property bool txtBold           : true            // Timer text bold
 
+        // Time cursor position
+        property int tPosition          : 0               // Timer position
+        property bool usefulButton      : true
+
+        property int firstItemValue     : dInfo.chronHrFirstDgt
+        property int secondItemValue    : dInfo.chronHrSecondDgt
+        property int thirtItemValue     : dInfo.chronScFirstDgt
+        property int fourthItemValue    : dInfo.chronScSecondDgt
+
+        id:pTimerr
         width: 880
         height: parent.height
         color: "#333333"
+        visible: api.ovenPower ? true : false
 
         Header
         {
@@ -107,7 +120,7 @@ Component
                 }
                 Text {
                     id: txtHrSecondItem
-                    text: "H"
+                    text: secondItemValue
                     color: txtColor
                     font.pixelSize: txtSize
                     font.bold: txtBold
@@ -116,16 +129,19 @@ Component
                 }
                 Text {
                     id: txtHrFirstItem
-                    text: "H"
+                    text: firstItemValue
                     color: txtColor
                     font.pixelSize: txtSize
                     font.bold: txtBold
                     anchors.right: txtHrSecondItem.left
                     anchors.top: txtHrSecondItem.top
+                    onTextChanged: {
+
+                    }
                 }
                 Text {
                     id: txtScFirstItem
-                    text: "S"
+                    text: thirtItemValue
                     color: txtColor
                     font.pixelSize: txtSize
                     font.bold: txtBold
@@ -134,7 +150,7 @@ Component
                 }
                 Text {
                     id: txtScSecondItem
-                    text: "S"
+                    text: fourthItemValue
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.horizontalCenter: parent.horizontalCenter
                     color: txtColor
@@ -142,6 +158,14 @@ Component
                     font.bold: txtBold
                     anchors.left: txtScFirstItem.right
                     anchors.top: txtScFirstItem.top
+                }
+                Rectangle {
+                    id: cursorRect
+                    width: txtHrFirstItem.width
+                    height: 3
+                    anchors.left: tPosition == 0 ? txtHrFirstItem.left :  tPosition == 1 ? txtHrSecondItem.left :  tPosition == 2 ? txtScFirstItem.left :txtScSecondItem.left
+                    anchors.top: txtHrFirstItem.bottom
+                    color: txtColor
                 }
             }
 
@@ -166,6 +190,13 @@ Component
                     rectBorderSize: numBtnBorder
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,3);
+                        }
+                    }
                 }
                 Button{
                     id: numBtn2
@@ -181,6 +212,13 @@ Component
                     anchors.right: numBtn3.left
                     anchors.top: numBtn3.top
                     anchors.rightMargin: numBtnMargin
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,2);
+                        }
+                    }
                 }
                 Button{
                     id: numBtn1
@@ -196,6 +234,13 @@ Component
                     anchors.right: numBtn2.left
                     anchors.top: numBtn2.top
                     anchors.rightMargin: numBtnMargin
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,1);
+                        }
+                    }
                 }
                 Button{
                     id: numBtn4
@@ -211,6 +256,13 @@ Component
                     anchors.left: numBtn3.right
                     anchors.top: numBtn3.top
                     anchors.leftMargin: numBtnMargin
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,4);
+                        }
+                    }
                 }
                 Button{
                     id: numBtn5
@@ -226,6 +278,13 @@ Component
                     anchors.left: numBtn4.right
                     anchors.top: numBtn4.top
                     anchors.leftMargin: numBtnMargin
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,5);
+                        }
+                    }
                 }
             }
 
@@ -250,6 +309,14 @@ Component
                     rectBorderSize: numBtnBorder
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
+                    visible: tPosition == 2 ? false:true
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,8);
+                        }
+                    }
                 }
                 Button{
                     id: numBtn7
@@ -265,6 +332,14 @@ Component
                     anchors.right: numBtn8.left
                     anchors.top: numBtn8.top
                     anchors.rightMargin: numBtnMargin
+                    visible: tPosition == 2 ? false:true
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,7);
+                        }
+                    }
                 }
                 Button{
                     id: numBtn6
@@ -280,6 +355,14 @@ Component
                     anchors.right: numBtn7.left
                     anchors.top: numBtn7.top
                     anchors.rightMargin: numBtnMargin
+                    visible: tPosition == 2 ? false:true
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,6);
+                        }
+                    }
                 }
                 Button{
                     id: numBtn9
@@ -295,6 +378,14 @@ Component
                     anchors.left: numBtn8.right
                     anchors.top: numBtn8.top
                     anchors.leftMargin: numBtnMargin
+                    visible: tPosition == 2 ? false:true
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,9);
+                        }
+                    }
                 }
                 Button{
                     id: numBtn0
@@ -310,6 +401,13 @@ Component
                     anchors.left: numBtn9.right
                     anchors.top: numBtn9.top
                     anchors.leftMargin: numBtnMargin
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            shiftCursor(tPosition,0);
+                        }
+                    }
                 }
             }
         }
@@ -332,6 +430,30 @@ Component
                 onClicked: {
                         myLoader.sourceComponent = pRunning
                 }
+            }
+        }
+
+        function shiftCursor(n,v) {
+//            console.log("N=" + n + " V= "+ v);
+            if(n === 0){
+                firstItemValue = v;
+                tPosition++;
+                dInfo.chronHrFirstDgt = v;
+            }
+            else if(n ===1){
+                secondItemValue = v;
+                dInfo.chronHrSecondDgt = v;
+                tPosition++;
+            }
+            else if(n ===2){
+                thirtItemValue = v;
+                dInfo.chronScFirstDgt = v
+                tPosition++;
+            }
+            else{
+                fourthItemValue = v;
+                dInfo.chronScSecondDgt = v;
+                tPosition=0;
             }
         }
     }
