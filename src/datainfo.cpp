@@ -14,7 +14,7 @@ DataInfo::DataInfo(QObject *parent) : QObject(parent),
     timerChron->start(1000);
 
     setStatus("Ready");
-    setTemp("0");
+    setTemp("350");
     setTriPos(1);
     setChronHrFirstDgt(0);
     setChronHrSecondDgt(0);
@@ -50,8 +50,7 @@ QString DataInfo::currentDate() const
 // Temp
 void DataInfo::setTemp(QString temp)
 {
-    setTriPos(temp.toInt());
-    m_temp = QString::number(dataController->getTemp(temp.toInt()));
+    m_temp = temp;
     emit tempChanged(m_temp);
 }
 QString DataInfo::temp() const
@@ -114,7 +113,7 @@ int DataInfo::chronScSecondDgt() const {
 //Oven Status
 void DataInfo::setOvenStatus(bool status){
     if (status)
-        timerChron->start(1000);
+        timerChron->start(1000); // 1000 is test value, normally value is 60000
     else
         timerChron->stop();
 

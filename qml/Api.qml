@@ -15,4 +15,5 @@ Item {
 
     property string temperature             : dInfo.temp
     property int alarmValue                 : dInfo.chronHrFirstDgt + dInfo.chronHrSecondDgt + dInfo.chronScFirstDgt + dInfo.chronScSecondDgt
+    property int tempTriangleCurrentValue   : 0
 }

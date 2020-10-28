@@ -17,9 +17,6 @@ public:
     // Date
     QString getCurrentDate();
 
-    // Temp
-    int getTemp(const int Temp);
-
     // Set-Get time digits
     void setHrFirstDigit(int value);
     int getHrFirstDigit() const;

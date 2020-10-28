@@ -32,7 +32,7 @@ Component
 
             ProgressBar
             {
-                value:progressBarValue
+                value:api.progressBarValue
                 anchors.top: tempText.bottom
                 anchors.left: tempText.left
                 anchors.topMargin: 40
