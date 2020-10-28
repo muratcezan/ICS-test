@@ -13,7 +13,6 @@ DataInfo::DataInfo(QObject *parent) : QObject(parent),
     timer_ls->start(1000);
     timerChron->start(1000);
 
-    setStatus("Ready");
     setTemp("350");
     setChronHrFirstDgt(0);
     setChronHrSecondDgt(0);
@@ -55,17 +54,6 @@ void DataInfo::setTemp(QString temp)
 QString DataInfo::temp() const
 {
     return m_temp;
-}
-
-// Status
-void DataInfo::setStatus(QString status)
-{
-    m_status = status;
-    emit statusChanged(m_status);
-}
-QString DataInfo::status() const
-{
-    return m_status;
 }
 
 // Chronometer digits

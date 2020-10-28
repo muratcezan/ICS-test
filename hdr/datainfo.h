@@ -18,7 +18,6 @@ class DataInfo : public QObject
     Q_PROPERTY(QString currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
 
     Q_PROPERTY(QString temp READ temp WRITE setTemp NOTIFY tempChanged)
-    Q_PROPERTY(QString status READ status WRITE setStatus NOTIFY statusChanged)
 
     Q_PROPERTY(int chronHrFirstDgt READ chronHrFirstDgt WRITE setChronHrFirstDgt NOTIFY chronHrFirstDgtChanged)
     Q_PROPERTY(int chronHrSecondDgt READ chronHrSecondDgt WRITE setChronHrSecondDgt NOTIFY chronHrSecondDgtChanged)
@@ -34,7 +33,6 @@ public:
     QString currentDate() const;
 
     QString temp() const;
-    QString status() const;
 
     int chronHrFirstDgt() const;
     int chronHrSecondDgt() const;
@@ -53,9 +51,6 @@ public slots:
     // Temp
     void setTemp(QString temp);
 
-    // Status
-    void setStatus(QString status);
-
     void setChronHrFirstDgt(int value);
     void setChronHrSecondDgt(int value);
     void setChronScFirstDgt(int value);
@@ -73,7 +68,6 @@ private:
     QString m_currentDate;
 
     QString m_temp;
-    QString m_status;
 
     int m_chronHrFirstDgt;
     int m_chronHrSecondDgt;
@@ -86,7 +80,6 @@ signals:
     void currentDateChanged(QString);
 
     void tempChanged(QString);
-    void statusChanged(QString);
 
     void chronHrFirstDgtChanged(int);
     void chronHrSecondDgtChanged(int);
