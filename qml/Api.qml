@@ -1,6 +1,9 @@
 import QtQuick 2.0
 
 Item {
+    property int pagesWidth: 880
+    property int progressBarWidth: ((13*pagesWidth)/14)
+
     property bool lightOven                 : false
     property bool ovenPower                 : false
     property bool ovenStatus                : dInfo.ovenStatus

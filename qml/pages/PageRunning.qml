@@ -7,7 +7,7 @@ Component
 {
     Rectangle
     {
-        width: 880
+        width: api.pagesWidth
         height: parent.height
         color: "#333333"
         visible: api.ovenPower ? true : false
@@ -36,7 +36,7 @@ Component
                 anchors.top: tempText.bottom
                 anchors.left: tempText.left
                 anchors.topMargin: 40
-                width: 820
+                width: api.progressBarWidth
             }
 
             Text {

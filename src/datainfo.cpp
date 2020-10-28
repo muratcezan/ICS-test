@@ -15,7 +15,6 @@ DataInfo::DataInfo(QObject *parent) : QObject(parent),
 
     setStatus("Ready");
     setTemp("350");
-    setTriPos(1);
     setChronHrFirstDgt(0);
     setChronHrSecondDgt(0);
     setChronScFirstDgt(0);
@@ -56,17 +55,6 @@ void DataInfo::setTemp(QString temp)
 QString DataInfo::temp() const
 {
     return m_temp;
-}
-
-// Triange position
-void DataInfo::setTriPos(int pos)
-{
-    m_tripos = pos;
-    emit triPosChanged(m_tripos);
-}
-int DataInfo::triPos() const
-{
-    return m_tripos;
 }
 
 // Status
