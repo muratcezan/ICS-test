@@ -77,5 +77,7 @@ Window {
     RightBar
     {
         id: mainRightBar
+        anchors.left: myLoader.right
+        anchors.top: myLoader.top
     }
 }

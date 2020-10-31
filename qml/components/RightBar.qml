@@ -5,8 +5,8 @@ Rectangle {
     id: rRightBar
     width: api.barWidth
     height: api.mainHeight
-    anchors.right: parent.right
-    anchors.top: parent.top
+//    anchors.right: parent.right
+//    anchors.top: parent.top
     color: "#8c8c8c"
     border.width: 1
     border.color: "white"
