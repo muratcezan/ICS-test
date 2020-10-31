@@ -34,8 +34,7 @@ SOURCES =+ \
     qml/pages/PageManuelTimer.qml \
     qml/pages/PageManuelTemperature.qml \
     qml/components/SliderNew.qml \
-    qml/Api.qml \
-    js/functionList.js
+    qml/Api.qml
 
 }
 DISTFILES += \

@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>js/functionList.js</file>
         <file>pics/alarm/alarm-clock-emp-line.png</file>
         <file>pics/alarm/alarm-clock-line.png</file>
         <file>pics/alarm/alarm-clock-rgb-line.png</file>

@@ -1,7 +1,6 @@
 import QtQuick 2.0
 
 import "../components"
-import "../../js/functionList.js" as Func
 
 Component
 {
