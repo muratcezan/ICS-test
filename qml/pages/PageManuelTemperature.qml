@@ -6,10 +6,12 @@ import "../components"
 
 Component
 {
+    id: pageManPageComp
     Rectangle
     {
-        width: 880
-        height: parent.height
+        id: pageManTep
+        width: api.pageWidth
+        height: api.mainHeight
         color: "#333333"
         visible: api.ovenPower ? true : false
         Header
@@ -76,7 +78,6 @@ Component
                     }
                 }
             }
-
             Rectangle {
                 id: setTimeValue
                 width: parent.width
@@ -133,7 +134,7 @@ Component
         }
         Footer
         {
-            id: footerPageCamPre
+            id: fPageManTemp
             hWidth: parent.width
             hHeight: parent.height / 6
             anchors.left: parent.left

@@ -39,7 +39,7 @@ Component
 
         Footer
         {
-            id: footerPageCamPre
+            id: fPageCookBook
             hWidth: parent.width
             hHeight: parent.height / 6
             anchors.left: parent.left
