@@ -70,17 +70,17 @@ Rectangle
 
     function firstButtonEvent()
     {
-        if(myLoader.sourceComponent == pManTemp) {
-            myLoader.sourceComponent = pManTimer;
+        if(myLoader.sourceComponent == mainManTemp) {
+            myLoader.sourceComponent = mainManTimer;
         }
-        else if(myLoader.sourceComponent == pManTimer) {
-            myLoader.sourceComponent = pRunning;
+        else if(myLoader.sourceComponent == mainManTimer) {
+            myLoader.sourceComponent = mainRunning;
             if(!dInfo.ovenStatus)
                 this.firstButtonText = "STOP"
             else
                 this.firstButtonText = "START"
         }
-        else if(myLoader.sourceComponent == pRunning || myLoader.sourceComponent == pCamPre) {
+        else if(myLoader.sourceComponent == mainRunning || myLoader.sourceComponent == mainCamPre) {
             if(!dInfo.ovenStatus){
                 this.firstButtonText = "STOP"
                 dInfo.ovenStatus = true;
@@ -94,9 +94,9 @@ Rectangle
 
     function secondButtonEvent()
     {
-        if(myLoader.sourceComponent == pRunning)
-            myLoader.sourceComponent = pCamPre;
+        if(myLoader.sourceComponent == mainRunning)
+            myLoader.sourceComponent = mainCamPre;
         else
-            myLoader.sourceComponent = pRunning;
+            myLoader.sourceComponent = mainRunning;
     }
 }

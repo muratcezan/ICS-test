@@ -77,7 +77,7 @@ Rectangle{
                     anchors.fill: parent
                     onClicked: {
                         if(api.ovenPower)
-                            myLoader.sourceComponent = pRunning
+                            myLoader.sourceComponent = mainRunning
                     }
 
                     onPressed: {
@@ -116,7 +116,7 @@ Rectangle{
                     anchors.fill: parent
                     onClicked: {
                         if(api.ovenPower)
-                            myLoader.sourceComponent = pCook
+                            myLoader.sourceComponent = mainCookBook
                     }
 
                     onPressed: cookBookBtn.imgSource = "qrc:/pics/menu/menu-rgb.png";
@@ -148,7 +148,7 @@ Rectangle{
                     anchors.fill: parent
                     onClicked: {
                         if(api.ovenPower)
-                            myLoader.sourceComponent = pManuelBake
+                            myLoader.sourceComponent = mainManuelBake
                     }
                 }
             }

@@ -154,9 +154,9 @@ Rectangle {
                         if(api.ovenPower)
                         {
                             if(api.ovenStatus)
-                                myLoader.sourceComponent = pRunning;
+                                myLoader.sourceComponent = mainRunning;
                             else
-                                myLoader.sourceComponent = pManTemp;
+                                myLoader.sourceComponent = mainManTemp;
                         }
                     }
                 }

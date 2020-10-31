@@ -72,7 +72,7 @@ Component
                     MouseArea{
                         anchors.fill: parent
                         onClicked: {
-                            myLoader.sourceComponent = pManTimer
+                            myLoader.sourceComponent = mainManTimer
 //                            dataUpdate.valueChanged("swicth","manuel-temp,manuel-timer");
                         }
                     }
@@ -148,7 +148,7 @@ Component
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                        myLoader.sourceComponent = pManTimer
+                        myLoader.sourceComponent = mainManTimer
                 }
             }
         }

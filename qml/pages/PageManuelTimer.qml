@@ -83,7 +83,7 @@ Component
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            myLoader.sourceComponent = pManTemp
+                            myLoader.sourceComponent = mainManTemp
                         }
                     }
                 }
@@ -427,7 +427,7 @@ Component
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                        myLoader.sourceComponent = pRunning
+                        myLoader.sourceComponent = mainRunning
                 }
             }
         }

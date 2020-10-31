@@ -17,9 +17,9 @@ Window {
         id: myLoader
         width: 880
         height: 450
-        anchors.left: leftBar.right
-        anchors.top: leftBar.top
-        sourceComponent: pDefault
+        anchors.left: mainLeftBar.right
+        anchors.top: mainLeftBar.top
+        sourceComponent: mainDefault
     }
 
     DataInfo
@@ -33,46 +33,46 @@ Window {
 
     LeftBar
     {
-        id: leftBar
+        id: mainLeftBar
     }
 
     PageDefault
     {
-        id: pDefault
+        id: mainDefault
     }
 
     PageCameraPreview
     {
-        id:pCamPre
+        id:mainCamPre
     }
 
     PageCookBook
     {
-        id: pCook
+        id: mainCookBook
     }
 
     PageManuelBake
     {
-        id: pManuelBake
+        id: mainManuelBake
     }
 
     PageRunning
     {
-        id: pRunning
+        id: mainRunning
     }
 
     PageManuelTimer
     {
-        id: pManTimer
+        id: mainManTimer
     }
 
     PageManuelTemperature
     {
-        id: pManTemp
+        id: mainManTemp
     }
 
     RightBar
     {
-        id: rightBar
+        id: mainRightBar
     }
 }
