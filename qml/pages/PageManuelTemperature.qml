@@ -29,8 +29,8 @@ Component
             id: tempTimeArea
             width: parent.width
             height: (4 * parent.height) / 6
-            anchors.left: hdrPageCamPre.left
-            anchors.top: hdrPageCamPre.bottom
+            anchors.left: hPageManTemp.left
+            anchors.top: hPageManTemp.bottom
             color: "transparent"
 
             Rectangle {
