@@ -2,7 +2,7 @@
 import QtQuick 2.0
 
 Rectangle{
-    id: lRightBar
+    id: rLeftBar
     width: api.barWidth
     height: api.mainHeight
     color: "#8c8c8c"
