@@ -2,7 +2,7 @@
 import QtQuick 2.0
 
 Rectangle {
-    id: rComp
+    id: rRightBar
     width: 360
     height: parent.height
     anchors.right: parent.right
