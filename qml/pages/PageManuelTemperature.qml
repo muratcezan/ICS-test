@@ -16,7 +16,7 @@ Component
         visible: api.ovenPower ? true : false
         Header
         {
-            id: hdrPageCamPre
+            id: hPageManTemp
             hWidth: parent.width
             hHeight: parent.height / 6
             anchors.left: parent.left

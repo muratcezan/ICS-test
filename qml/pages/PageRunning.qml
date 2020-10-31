@@ -14,7 +14,7 @@ Component
 
         Header
         {
-            id: hdrPageCamPre
+            id: hPageRunning
             hWidth: parent.width
             hHeight: parent.height / 6
             anchors.left: parent.left
