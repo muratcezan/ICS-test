@@ -6,10 +6,11 @@ import "../components"
 
 Component
 {
-    id: pageManPageComp
+    id: cManTemp
+
     Rectangle
     {
-        id: pageManTep
+        id: rManTemp
         width: api.pageWidth
         height: api.mainHeight
         color: "#333333"

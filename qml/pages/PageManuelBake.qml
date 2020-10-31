@@ -1,11 +1,15 @@
 import QtQuick 2.0
 
 import "../components"
-Component{
+Component
+{
+    id: cManuelBake
+
     Rectangle
     {
-        width: 880
-        height: parent.height
+        id: rManuelBake
+        width: api.pageWidth
+        height: api.mainHeight
         color: "#333333"
         visible: api.ovenPower ? true : false
 

@@ -4,6 +4,8 @@ import "../components"
 
 Component
 {
+    id: cManTimer
+
     Rectangle
     {
         // Number buttons properties
@@ -30,9 +32,9 @@ Component
         property int thirtItemValue     : dInfo.chronScFirstDgt
         property int fourthItemValue    : dInfo.chronScSecondDgt
 
-        id:pTimerr
-        width: 880
-        height: parent.height
+        id:rManTimer
+        width: api.pageWidth
+        height: api.mainHeight
         color: "#333333"
         visible: api.ovenPower ? true : false
 

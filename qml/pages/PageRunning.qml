@@ -5,10 +5,13 @@ import QtQuick.Controls.Styles 1.4
 import "../components"
 Component
 {
+    id: cRunning
+
     Rectangle
     {
-        width: api.pagesWidth
-        height: parent.height
+        id: rRunning
+        width: api.pageWidth
+        height: api.mainHeight
         color: "#333333"
         visible: api.ovenPower ? true : false
 

@@ -7,8 +7,8 @@ Item {
     readonly property int barWidth      : 360           // Left and Right bar width
     readonly property int pageWidth     : 880           // Page width
 
-    property int pagesWidth: 880
-    property int progressBarWidth: ((13*pagesWidth)/14)
+    // TODO: Updated dependency and remove
+    property int progressBarWidth: ((13*pageWidth)/14)
 
     property bool lightOven                 : false
     property bool ovenPower                 : false

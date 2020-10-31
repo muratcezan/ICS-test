@@ -4,10 +4,13 @@ import "../components"
 
 Component
 {
-    id: compPageCook
-    Rectangle {
-        width: 880
-        height: parent.height
+    id: cCookBook
+
+    Rectangle
+    {
+        id:rCookBook
+        width: api.pageWidth
+        height: api.mainHeight
         color: "#333333"
         visible: api.ovenPower ? true : false
 

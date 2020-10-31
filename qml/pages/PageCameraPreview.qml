@@ -4,10 +4,13 @@ import "../components"
 
 Component
 {
+    id:cCamPre
+
     Rectangle
     {
-        width: 880
-        height: parent.height
+        id:rCamPre
+        width: api.pageWidth
+        height: api.mainHeight
         color: "#333333"
         visible: api.ovenPower ? true : false
 
