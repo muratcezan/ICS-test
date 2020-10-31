@@ -3,8 +3,8 @@ import QtQuick 2.0
 
 Rectangle {
     id: rRightBar
-    width: 360
-    height: parent.height
+    width: api.barWidth
+    height: api.mainHeight
     anchors.right: parent.right
     anchors.top: parent.top
     color: "#8c8c8c"

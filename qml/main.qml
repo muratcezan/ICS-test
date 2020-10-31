@@ -7,6 +7,7 @@ import "components"
 import "pages"
 
 Window {
+    id: mainWind
     width: 1600
     height: 450
     visible: true
@@ -34,6 +35,8 @@ Window {
     LeftBar
     {
         id: mainLeftBar
+        anchors.left: mainWind.left
+        anchors.top: mainWind.top
     }
 
     PageDefault
