@@ -1,11 +1,11 @@
 import QtQuick 2.0
 
 Rectangle {
-    property int tempXMax               : parent.width                  // Temp x scale maximum value
-    property int tempTriangleMargins    : tempXMax/44                   // Temp margins value
-    property double tempMaxMarginFactor : 12.5                          // Calculate Margins for factor value
-    property int tempMaxMarginValue     : tempXMax - (tempXMax / tempMaxMarginFactor)   // Temp max scale value
-    property int limitFactor            : 2                             // Limit factor
+    readonly property int tempXMax               : api.pageWidth                // Temp x scale maximum value
+    readonly property int tempTriangleMargins    : tempXMax/44                  // Temp margins value
+    readonly property double tempMaxMarginFactor : 12.5                         // Calculate Margins for factor value
+    readonly property int tempMaxMarginValue     : tempXMax - (tempXMax / tempMaxMarginFactor)   // Temp max scale value
+    readonly property int limitFactor            : 2                            // Limit factor
 
     id: mySlider
     height: tempTriangleMargins
@@ -13,9 +13,6 @@ Rectangle {
     smooth: true
     color:"transparent"
     anchors {
-        left: parent.left
-        right: parent.right
-        top:parent.top
         leftMargin: tempTriangleMargins
         rightMargin: tempTriangleMargins
     }
@@ -28,6 +25,7 @@ Rectangle {
         x: api.tempTriangleCurrentValue; y:1
 
         MouseArea {
+            id:triangleMA
             anchors.fill: parent
             drag.target: parent
             drag.axis: Drag.XAxis

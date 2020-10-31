@@ -114,7 +114,9 @@ Component
                 color: "transparent"
 
                 SliderNew {
-                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.left: setSlider.left
+                    anchors.right: setSlider.right
+                    anchors.top:setSlider.top
                     z:2
                 }
 
