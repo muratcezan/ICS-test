@@ -5,15 +5,13 @@ CONFIG += c++11
 HEADERS += \
     hdr/datacontroller.h \
     hdr/datainfo.h \
-    hdr/mainwindow.h \
-    hdr/worker.h
+    hdr/mainwindow.h
 
 SOURCES += \
         src/datacontroller.cpp \
         src/datainfo.cpp \
         src/main.cpp \
-        src/mainwindow.cpp \
-        src/worker.cpp
+        src/mainwindow.cpp
 
 RESOURCES += qml.qrc
 
