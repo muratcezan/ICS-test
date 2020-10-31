@@ -108,20 +108,26 @@ Component
             Rectangle {
                 id: setSlider
                 width: parent.width
-                height: (2*parent.height) / 4
+                height: parent.height / 2
                 anchors.left: setTimeValue.left
                 anchors.top: setTimeValue.bottom
                 color: "transparent"
 
                 SliderNew {
-                    anchors.left: setSlider.left
-                    anchors.right: setSlider.right
+                    anchors.left: pBar.left
+                    anchors.right: pBar.right
+                    anchors.leftMargin: -20
+                    anchors.rightMargin: -20
                     anchors.top:setSlider.top
+                    anchors.topMargin: -15
                     z:2
                 }
 
-                TempBar {
-
+                Image {
+                    id: pBar
+                    source: "qrc:/pics/other/bar.png"
+                    anchors.horizontalCenter: parent.horizontalCenter
+//                    anchors.topMargin: -100
                 }
             }
         }

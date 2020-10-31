@@ -13,7 +13,6 @@ DataInfo::DataInfo(QObject *parent) : QObject(parent),
     timer_ls->start(1000);
     timerChron->start(1000);
 
-    setTemp("350");
     setChronHrFirstDgt(0);
     setChronHrSecondDgt(0);
     setChronScFirstDgt(0);

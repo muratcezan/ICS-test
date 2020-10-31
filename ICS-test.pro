@@ -34,7 +34,6 @@ SOURCES =+ \
     qml/pages/PageManuelTimer.qml \
     qml/pages/PageManuelTemperature.qml \
     qml/components/SliderNew.qml \
-    qml/components/TempBar.qml \
     qml/Api.qml \
     js/functionList.js
 
@@ -58,6 +57,7 @@ DISTFILES += \
     pics/menu/menu.png \
     pics/more/more-rgb.png \
     pics/more/more.png \
+    pics/other/bar.png \
     pics/other/duck.png \
     pics/other/triangle.png \
     pics/oven/oven-line.png \

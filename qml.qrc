@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>js/functionList.js</file>
         <file>pics/alarm/alarm-clock-emp-line.png</file>
         <file>pics/alarm/alarm-clock-line.png</file>
         <file>pics/alarm/alarm-clock-rgb-line.png</file>
@@ -18,6 +19,9 @@
         <file>pics/menu/menu.png</file>
         <file>pics/more/more-rgb.png</file>
         <file>pics/more/more.png</file>
+        <file>pics/other/bar.png</file>
+        <file>pics/other/duck.png</file>
+        <file>pics/other/triangle.png</file>
         <file>pics/oven/oven-line.png</file>
         <file>pics/oven/oven-rgb-line.png</file>
         <file>pics/oven/oven-rgb.png</file>
@@ -28,24 +32,20 @@
         <file>pics/wifi/wifi-line.png</file>
         <file>pics/wifi/wifi-rgb-line.png</file>
         <file>pics/wifi/wifi-rgb.png</file>
+        <file>qml/Api.qml</file>
         <file>qml/components/Button.qml</file>
+        <file>qml/components/Footer.qml</file>
+        <file>qml/components/Header.qml</file>
         <file>qml/components/LeftBar.qml</file>
         <file>qml/components/RightBar.qml</file>
-        <file>qml/main.qml</file>
-        <file>qml/pages/PageDefault.qml</file>
-        <file>qml/components/Header.qml</file>
-        <file>qml/components/Footer.qml</file>
-        <file>qml/pages/PageCameraPreview.qml</file>
-        <file>pics/other/duck.png</file>
-        <file>qml/pages/PageManuelBake.qml</file>
-        <file>qml/pages/PageCookBook.qml</file>
-        <file>qml/pages/PageRunning.qml</file>
-        <file>qml/pages/PageManuelTimer.qml</file>
-        <file>qml/pages/PageManuelTemperature.qml</file>
         <file>qml/components/SliderNew.qml</file>
-        <file>pics/other/triangle.png</file>
-        <file>qml/components/TempBar.qml</file>
-        <file>js/functionList.js</file>
-        <file>qml/Api.qml</file>
+        <file>qml/main.qml</file>
+        <file>qml/pages/PageCameraPreview.qml</file>
+        <file>qml/pages/PageCookBook.qml</file>
+        <file>qml/pages/PageDefault.qml</file>
+        <file>qml/pages/PageManuelBake.qml</file>
+        <file>qml/pages/PageManuelTemperature.qml</file>
+        <file>qml/pages/PageManuelTimer.qml</file>
+        <file>qml/pages/PageRunning.qml</file>
     </qresource>
 </RCC>

@@ -16,6 +16,8 @@ Item {
     property bool finishingOven             : false
     property double progressBarValue        : 0.0
 
+    property int sliderPosition: 0
+
     // Chronometer Time Digits
     property string chronoHrFirstDigit      : dInfo.chronHrFirstDgt
     property string chronoHrSecondDigit     : dInfo.chronHrSecondDgt
