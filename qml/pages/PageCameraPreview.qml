@@ -45,7 +45,7 @@ Component
 
         Footer
         {
-            id: footerPageCamPre
+            id: fPageCamPre
             hWidth: parent.width
             hHeight: parent.height / 6
             anchors.left: parent.left
