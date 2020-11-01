@@ -34,8 +34,8 @@ Component
             rectRadius: 20
             rectColor: "#a6a6a6"
             rectBorderSize: 1
-            anchors.top: hdrPageCamPre.bottom
-            anchors.left: hdrPageCamPre.left
+            anchors.top: hPageCookBook.bottom
+            anchors.left: hPageCookBook.left
             anchors.leftMargin: 20
             anchors.topMargin: 20
         }
