@@ -29,8 +29,8 @@ Component
             id: opaCam
             width: parent.width
             height: ( 4 * parent.height)/6
-            anchors.left: hdrPageCamPre.left
-            anchors.top: hdrPageCamPre.bottom
+            anchors.left: hPageCamPre.left
+            anchors.top: hPageCamPre.bottom
             color: "black"
             opacity: api.lightOven ? 0.8 : 1.0
             z:2

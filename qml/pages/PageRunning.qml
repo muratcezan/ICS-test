@@ -29,8 +29,8 @@ Component
         {
             width: parent.width
             height: ( 4 * parent.height)/6
-            anchors.left: hdrPageCamPre.left
-            anchors.top: hdrPageCamPre.bottom
+            anchors.left: hPageRunning.left
+            anchors.top: hPageRunning.bottom
             color: "transparent"
 
             ProgressBar
