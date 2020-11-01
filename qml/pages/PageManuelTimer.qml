@@ -9,19 +9,19 @@ Component
     Rectangle
     {
         // Number buttons properties
-        property int numBtnSize         : 60              // Number buttons size
-        property int numBtnRadius       : numBtnSize/2    // Number buttons radius
-        property string numBtnColor     : "#4d4d4d"       // Number buttons color
-        property int numBtnTxtSize      : 30              // Number buttons text size
-        property int numBtnMargin       : 10              // Number buttons margin
-        property bool numBtnTxtVisible  : true            // Number buttons text visible
-        property int numBtnBorder       : 2               // Number buttons border size
-        property bool numBtnTxtBold     : true            // Number buttons text bold
+        readonly property int numBtnSize         : 60              // Number buttons size
+        readonly property int numBtnRadius       : numBtnSize/2    // Number buttons radius
+        readonly property string numBtnColor     : "#4d4d4d"       // Number buttons color
+        readonly property int numBtnTxtSize      : 30              // Number buttons text size
+        readonly property int numBtnMargin       : 10              // Number buttons margin
+        readonly property bool numBtnTxtVisible  : true            // Number buttons text visible
+        readonly property int numBtnBorder       : 2               // Number buttons border size
+        readonly property bool numBtnTxtBold     : true            // Number buttons text bold
 
         // Timer text properties
-        property int txtSize            : 50              // Timer text size
-        property string txtColor        : "#33ff33"       // Timer text color
-        property bool txtBold           : true            // Timer text bold
+        readonly property int txtSize            : 50              // Timer text size
+        readonly property string txtColor        : "#33ff33"       // Timer text color
+        readonly property bool txtBold           : true            // Timer text bold
 
         // Time cursor position
         property int tPosition          : 0               // Timer position
