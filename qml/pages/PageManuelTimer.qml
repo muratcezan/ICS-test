@@ -170,243 +170,37 @@ Component
                 }
             }
 
-            Rectangle {
-                id: numberListFisrt
-                width: parent.width
-                height: parent.height / 4
-                anchors.left: setTimeValue.left
+            Grid {
+                id: grd
                 anchors.top: setTimeValue.bottom
-                color: "transparent"
+                anchors.horizontalCenter: setTimeValue.horizontalCenter
+                anchors.topMargin: 10
 
-                Button{
-                    id:numBtn3
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "3"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.verticalCenter: parent.verticalCenter
+                spacing: 10
+                columns: 5
+                rows: 2
 
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,3);
-                        }
-                    }
-                }
-                Button{
-                    id: numBtn2
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "2"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.right: numBtn3.left
-                    anchors.top: numBtn3.top
-                    anchors.rightMargin: numBtnMargin
+                Repeater {
+                    model: 10
 
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,2);
-                        }
-                    }
-                }
-                Button{
-                    id: numBtn1
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "1"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.right: numBtn2.left
-                    anchors.top: numBtn2.top
-                    anchors.rightMargin: numBtnMargin
+                    Button{
+                        id:numBtn3
+                        buttonWitdh: numBtnSize
+                        buttonHeight: numBtnSize
+                        textVisible: numBtnTxtVisible
+                        textSource: index//"3"
+                        rectRadius: numBtnRadius
+                        rectColor: numBtnColor
+                        txtSize: numBtnTxtSize
+                        txtBold: numBtnTxtBold
+                        rectBorderSize: numBtnBorder
+                        visible: (tPosition == 2) && ((index == 6)||(index == 7)||(index == 8)||(index==9)) ? false : true
 
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,1);
-                        }
-                    }
-                }
-                Button{
-                    id: numBtn4
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "4"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.left: numBtn3.right
-                    anchors.top: numBtn3.top
-                    anchors.leftMargin: numBtnMargin
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,4);
-                        }
-                    }
-                }
-                Button{
-                    id: numBtn5
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "5"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.left: numBtn4.right
-                    anchors.top: numBtn4.top
-                    anchors.leftMargin: numBtnMargin
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,5);
-                        }
-                    }
-                }
-            }
-
-            Rectangle {
-                id: numberListSecond
-                width: parent.width
-                height: parent.height / 4
-                anchors.left: numberListFisrt.left
-                anchors.top: numberListFisrt.bottom
-                color: "transparent"
-
-                Button{
-                    id:numBtn8
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "8"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    anchors.verticalCenter: parent.verticalCenter
-                    visible: tPosition == 2 ? false:true
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,8);
-                        }
-                    }
-                }
-                Button{
-                    id: numBtn7
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "7"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.right: numBtn8.left
-                    anchors.top: numBtn8.top
-                    anchors.rightMargin: numBtnMargin
-                    visible: tPosition == 2 ? false:true
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,7);
-                        }
-                    }
-                }
-                Button{
-                    id: numBtn6
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "6"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.right: numBtn7.left
-                    anchors.top: numBtn7.top
-                    anchors.rightMargin: numBtnMargin
-                    visible: tPosition == 2 ? false:true
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,6);
-                        }
-                    }
-                }
-                Button{
-                    id: numBtn9
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "9"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.left: numBtn8.right
-                    anchors.top: numBtn8.top
-                    anchors.leftMargin: numBtnMargin
-                    visible: tPosition == 2 ? false:true
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,9);
-                        }
-                    }
-                }
-                Button{
-                    id: numBtn0
-                    buttonWitdh: numBtnSize
-                    buttonHeight: numBtnSize
-                    textVisible: numBtnTxtVisible
-                    textSource: "0"
-                    rectRadius: numBtnRadius
-                    rectColor: numBtnColor
-                    txtSize: numBtnTxtSize
-                    txtBold: numBtnTxtBold
-                    rectBorderSize: numBtnBorder
-                    anchors.left: numBtn9.right
-                    anchors.top: numBtn9.top
-                    anchors.leftMargin: numBtnMargin
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            shiftCursor(tPosition,0);
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                shiftCursor(tPosition,index);
+                            }
                         }
                     }
                 }
@@ -437,22 +231,18 @@ Component
         function shiftCursor(n,v) {
 //            console.log("N=" + n + " V= "+ v);
             if(n === 0){
-                firstItemValue = v;
                 tPosition++;
                 dInfo.chronHrFirstDgt = v;
             }
             else if(n ===1){
-                secondItemValue = v;
                 dInfo.chronHrSecondDgt = v;
                 tPosition++;
             }
             else if(n ===2){
-                thirtItemValue = v;
                 dInfo.chronScFirstDgt = v
                 tPosition++;
             }
             else{
-                fourthItemValue = v;
                 dInfo.chronScSecondDgt = v;
                 tPosition=0;
             }
