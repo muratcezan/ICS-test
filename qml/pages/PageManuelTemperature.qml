@@ -116,6 +116,7 @@ Component
                 color: "transparent"
 
                 SliderNew {
+                    id: sldr
                     anchors.left: pBar.left
                     anchors.right: pBar.right
                     anchors.leftMargin: -20
@@ -123,13 +124,21 @@ Component
                     anchors.top:setSlider.top
                     anchors.topMargin: -15
                     z:2
+                    // Value change
+                    onValueChanged: {
+                        dInfo.setTemp(sldr.value);
+                    }
+
+                    // Slider loaded
+                    Component.onCompleted: {
+                        sldr.value = 350;
+                    }
                 }
 
                 Image {
                     id: pBar
                     source: "qrc:/pics/other/bar.png"
                     anchors.horizontalCenter: parent.horizontalCenter
-//                    anchors.topMargin: -100
                 }
             }
         }
