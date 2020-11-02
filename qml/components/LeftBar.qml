@@ -2,6 +2,16 @@
 import QtQuick 2.0
 
 Rectangle{
+    property alias powerButtonClicked: powerBtnClick
+
+    property alias ovenButtonClicked: btnOvenClick
+    property alias btnOvenAlias: btnOven
+
+    property alias cookBookBtnClicked: cookBookBtnClick
+    property alias cookBookBtnAlias: cookBookBtn
+
+    property alias moreButtonMouse: moreButtonMouseArea
+
     id: rLeftBar
     width: api.barWidth
     height: api.mainHeight
@@ -30,14 +40,8 @@ Rectangle{
             imgHeight: parent.width / 2
 
             MouseArea {
+                id:powerBtnClick
                 anchors.fill: parent
-                onClicked: {
-                    // Start the Oven
-                    if(api.ovenPower)
-                        api.ovenPower = false;
-                    else
-                        api.ovenPower = true;
-                }
             }
         }
     }
@@ -72,19 +76,9 @@ Rectangle{
                 imgHeight: parent.width - 30
 
                 MouseArea {
+                    id: btnOvenClick
                     anchors.fill: parent
-                    onClicked: {
-                        if(api.ovenPower)
-                            myLoader.sourceComponent = mainRunning
-                    }
 
-                    onPressed: {
-                        btnOven.imgSource= "qrc:/pics/oven/oven-rgb-line.png"
-                    }
-
-                    onReleased: {
-                        btnOven.imgSource= "qrc:/pics/oven/oven-line.png"
-                    }
                 }
             }
         }
@@ -111,14 +105,9 @@ Rectangle{
                 imgHeight: parent.width - 40
 
                 MouseArea {
+                    id: cookBookBtnClick
                     anchors.fill: parent
-                    onClicked: {
-                        if(api.ovenPower)
-                            myLoader.sourceComponent = mainCookBook
-                    }
 
-                    onPressed: cookBookBtn.imgSource = "qrc:/pics/menu/menu-rgb.png";
-                    onReleased: cookBookBtn.imgSource = "qrc:/pics/menu/menu.png";
                 }
             }
         }
@@ -134,6 +123,7 @@ Rectangle{
 
             Button
             {
+                id: moreButton
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
@@ -143,11 +133,8 @@ Rectangle{
                 imgWidth: parent.width - 50
                 imgHeight: parent.width - 50
                 MouseArea {
+                    id:moreButtonMouseArea
                     anchors.fill: parent
-                    onClicked: {
-                        if(api.ovenPower)
-                            myLoader.sourceComponent = mainManuelBake
-                    }
                 }
             }
         }

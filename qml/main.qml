@@ -37,6 +37,36 @@ Window {
         id: mainLeftBar
         anchors.left: mainWind.left
         anchors.top: mainWind.top
+        powerButtonClicked.onClicked: {
+            // Start the Oven
+            if(api.ovenPower)
+                api.ovenPower = false;
+            else
+                api.ovenPower = true;
+        }
+
+        ovenButtonClicked.onClicked: {
+            if(api.ovenPower)
+                myLoader.sourceComponent = mainRunning
+        }
+
+        ovenButtonClicked.onPressed: btnOvenAlias.imgSource= "qrc:/pics/oven/oven-rgb-line.png"
+
+        ovenButtonClicked.onReleased: btnOvenAlias.imgSource= "qrc:/pics/oven/oven-line.png"
+
+        cookBookBtnClicked.onClicked: {
+            if(api.ovenPower)
+                myLoader.sourceComponent = mainCookBook
+        }
+
+        cookBookBtnClicked.onPressed: cookBookBtnAlias.imgSource = "qrc:/pics/menu/menu-rgb.png";
+        cookBookBtnClicked.onReleased: cookBookBtnAlias.imgSource = "qrc:/pics/menu/menu.png";
+
+        moreButtonMouse.onClicked: {
+            if(api.ovenPower)
+                myLoader.sourceComponent = mainManuelBake
+        }
+
     }
 
     PageDefault
