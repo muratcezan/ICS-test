@@ -2,6 +2,10 @@
 import QtQuick 2.0
 
 Rectangle {
+
+    property alias lightButtonMouse: lightButtonMouseArea
+    property alias settingsButtonMouse: settingsButtonMouseArea
+
     id: rRightBar
     width: api.barWidth
     height: api.mainHeight
@@ -84,6 +88,7 @@ Rectangle {
 
             Button
             {
+                id: lightButton
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
@@ -94,15 +99,8 @@ Rectangle {
                 imgHeight: parent.width - 40
 
                 MouseArea{
+                    id: lightButtonMouseArea
                     anchors.fill: parent
-                    onClicked: {
-                        if(api.ovenPower){
-                            if(api.lightOven)
-                                api.lightOven = false
-                            else
-                                api.lightOven = true
-                        }
-                    }
                 }
             }
         }
@@ -140,6 +138,7 @@ Rectangle {
 
             Button
             {
+                id: settingsButton
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
@@ -149,16 +148,8 @@ Rectangle {
                 imgWidth: parent.width - 60
                 imgHeight: parent.width - 60
                 MouseArea {
+                    id: settingsButtonMouseArea
                     anchors.fill: parent
-                    onClicked: {
-                        if(api.ovenPower)
-                        {
-                            if(api.ovenStatus)
-                                myLoader.sourceComponent = mainRunning;
-                            else
-                                myLoader.sourceComponent = mainManTemp;
-                        }
-                    }
                 }
             }
         }

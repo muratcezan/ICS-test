@@ -109,5 +109,23 @@ Window {
         id: mainRightBar
         anchors.left: myLoader.right
         anchors.top: myLoader.top
+        lightButtonMouse.onClicked: {
+            if(api.ovenPower){
+                if(api.lightOven)
+                    api.lightOven = false
+                else
+                    api.lightOven = true
+            }
+        }
+        settingsButtonMouse.onClicked: {
+            if(api.ovenPower)
+            {
+                if(api.ovenStatus)
+                    myLoader.sourceComponent = mainRunning;
+                else
+                    myLoader.sourceComponent = mainManTemp;
+            }
+        }
+
     }
 }
