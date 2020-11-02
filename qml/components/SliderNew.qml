@@ -9,8 +9,6 @@ Slider {
     readonly property int minTemp       : 350
     // Slider step size
     readonly property int stepsSize     : 5
-    // Slider current value
-    property int tempValue : control.value
 
     id: control
     from: minTemp
