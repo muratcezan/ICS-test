@@ -14,7 +14,8 @@ Window {
     title: qsTr("ICS-Test")
     color: "#333333"
 
-    Loader {
+    Loader
+    {
         id: myLoader
         width: 880
         height: 450
@@ -28,7 +29,8 @@ Window {
         id: dInfo
     }
 
-    Api{
+    Api
+    {
         id:api
     }
 
@@ -72,6 +74,8 @@ Window {
     PageDefault
     {
         id: mainDefault
+//        currentTimeText: dInfo.currentTime
+//        currentDateText: dInfo.currentDate
     }
 
     PageCameraPreview
@@ -126,6 +130,7 @@ Window {
                     myLoader.sourceComponent = mainManTemp;
             }
         }
-
     }
+
+
 }
