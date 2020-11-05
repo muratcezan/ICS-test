@@ -17,11 +17,14 @@ Window {
     Loader
     {
         id: myLoader
-        width: 880
-        height: 450
+//        width: 880
+//        height: 450
         anchors.left: mainLeftBar.right
         anchors.top: mainLeftBar.top
-        sourceComponent: mainDefault
+//        sourceComponent: mainDefault
+        onLoaded: {
+            console.log("Loaded");
+        }
     }
 
     DataInfo
@@ -71,42 +74,42 @@ Window {
 
     }
 
-    PageDefault
-    {
-        id: mainDefault
+//    PageDefault
+//    {
+//        id: mainDefault
 //        currentTimeText: dInfo.currentTime
 //        currentDateText: dInfo.currentDate
-    }
+//    }
 
-    PageCameraPreview
-    {
-        id:mainCamPre
-    }
+//    PageCameraPreview
+//    {
+//        id:mainCamPre
+//    }
 
-    PageCookBook
-    {
-        id: mainCookBook
-    }
+//    PageCookBook
+//    {
+//        id: mainCookBook
+//    }
 
-    PageManuelBake
-    {
-        id: mainManuelBake
-    }
+//    PageManuelBake
+//    {
+//        id: mainManuelBake
+//    }
 
-    PageRunning
-    {
-        id: mainRunning
-    }
+//    PageRunning
+//    {
+//        id: mainRunning
+//    }
 
-    PageManuelTimer
-    {
-        id: mainManTimer
-    }
+//    PageManuelTimer
+//    {
+//        id: mainManTimer
+//    }
 
-    PageManuelTemperature
-    {
-        id: mainManTemp
-    }
+//    PageManuelTemperature
+//    {
+//        id: mainManTemp
+//    }
 
     RightBar
     {
@@ -132,5 +135,9 @@ Window {
         }
     }
 
-
+    Component.onCompleted: {
+        myLoader.setSource("qrc:/qml/pages/PageDefault.qml",
+                        { currentTimeText: dInfo.currentTime,
+                          currentDateText: dInfo.currentDate });
+    }
 }

@@ -1,12 +1,12 @@
 import QtQuick 2.0
 
-Component {
+Item {
     id: componentDefault
 
+    property alias currentTimeText: currentTime.text
+    property alias currentDateText: currentDate.text
     Rectangle {
 
-        property alias currentTimeText: currentTime.text
-        property alias currentDateText: currentDate.text
         id: defaultPage
         width: 880
         height: 450
