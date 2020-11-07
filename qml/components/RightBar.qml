@@ -2,15 +2,23 @@
 import QtQuick 2.0
 
 Rectangle {
+    // Bar properties
+    property alias lightButtonMouse     : lightButtonMA
+    property alias settingsButtonMouse  : settingsButtonMouseArea
+    property bool lightOvenStatus       : false
+    property int alarmValue             : 0
 
-    property alias lightButtonMouse: lightButtonMouseArea
-    property alias settingsButtonMouse: settingsButtonMouseArea
+    // Oven power status
+    property bool pStatus               : false
+
+    // Button signals
+    signal lightButtonClk()
+    signal clockButtonClk()
+    signal settingsButtonClk()
 
     id: rRightBar
-    width: api.barWidth
-    height: api.mainHeight
-//    anchors.right: parent.right
-//    anchors.top: parent.top
+    width: 360
+    height: 450
     color: "#8c8c8c"
     border.width: 1
     border.color: "white"
@@ -34,6 +42,7 @@ Rectangle {
 
             Button
             {
+                id: wirelessButton
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
@@ -41,7 +50,7 @@ Rectangle {
                 textVisible: false
                 anchors.centerIn: parent
                 imgWidth: parent.width - 200
-                imgHeight: parent.width - 200
+                imgHeight: parent.width - 200                
             }
         }
 
@@ -50,13 +59,13 @@ Rectangle {
             id: bluetoothArea
             width: parent.width
             height: parent.height/3
-
             anchors.top: wirelessArea.bottom
             anchors.right: wirelessArea.right
             color: "transparent"
 
             Button
             {
+                id: bluetoothButton
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
@@ -92,15 +101,16 @@ Rectangle {
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
-                imgSource: api.lightOven ? "qrc:/pics/light/lightbulb-on.png" : "qrc:/pics/light/lightbulb-off.png"
+                imgSource: lightOvenStatus ? "qrc:/pics/light/lightbulb-on.png" : "qrc:/pics/light/lightbulb-off.png"
                 textVisible: false
                 anchors.centerIn: parent
                 imgWidth: parent.width - 40
                 imgHeight: parent.width - 40
 
                 MouseArea{
-                    id: lightButtonMouseArea
+                    id: lightButtonMA
                     anchors.fill: parent
+                    onClicked: lightButtonClk()
                 }
             }
         }
@@ -116,14 +126,21 @@ Rectangle {
 
             Button
             {
+                id: clockButton
                 buttonWitdh: parent.width
                 buttonHeight: parent.width
                 imgVisible: true
-                imgSource: ((api.alarmValue < 5) && (api.ovenStatus)) ? "qrc:/pics/alarm/alarm-clock-rgb-line.png" :"qrc:/pics/alarm/alarm-clock-line.png"
+                imgSource: (((alarmValue < 5) && (alarmValue > 0)) && (pStatus)) ? "qrc:/pics/alarm/alarm-clock-rgb-line.png" :"qrc:/pics/alarm/alarm-clock-line.png"
                 textVisible: false
                 anchors.centerIn: parent
                 imgWidth: parent.width - 40
                 imgHeight: parent.width - 40
+
+                MouseArea{
+                    id:clockButtonMA
+                    anchors.fill: parent
+                    onClicked: clockButtonClk()
+                }
             }
         }
 
@@ -150,6 +167,7 @@ Rectangle {
                 MouseArea {
                     id: settingsButtonMouseArea
                     anchors.fill: parent
+                    onClicked: settingsButtonClk()
                 }
             }
         }

@@ -17,9 +17,16 @@ Rectangle
     property int secondButtonHeight              // Second button height
     property bool secondButtonVisible            // Second button visible
 
+    // Buttons mouse events
+//    property alias fButtonMA: firstButtonArea
+//    property alias sButtonMA: secondButtonArea
+
+    signal clk()
+
     width: hWidth
     height: hHeight
     color: "#737373"
+    id:footerRoot
 
     // Operation button
     Button
@@ -39,8 +46,10 @@ Rectangle
         visible: firstButtonVisible
 
         MouseArea {
+            id:firstButtonArea
             anchors.fill: parent
-            onClicked: firstButtonEvent();
+//            onClicked: firstButtonEvent();
+            onClicked: footerRoot.clk()
         }
     }
 
@@ -63,40 +72,42 @@ Rectangle
         visible: secondButtonVisible
 
         MouseArea {
+            id:secondButtonArea
             anchors.fill: parent
-            onClicked: secondButtonEvent();
+//            onClicked: secondButtonEvent();
+            onClicked: footerRoot.clk()
         }
     }
 
-    function firstButtonEvent()
-    {
-        if(myLoader.sourceComponent == mainManTemp) {
-            myLoader.sourceComponent = mainManTimer;
-        }
-        else if(myLoader.sourceComponent == mainManTimer) {
-            myLoader.sourceComponent = mainRunning;
-            if(!dInfo.ovenStatus)
-                this.firstButtonText = "STOP"
-            else
-                this.firstButtonText = "START"
-        }
-        else if(myLoader.sourceComponent == mainRunning || myLoader.sourceComponent == mainCamPre) {
-            if(!dInfo.ovenStatus){
-                this.firstButtonText = "STOP"
-                dInfo.ovenStatus = true;
-            }
-            else{
-                this.firstButtonText = "START"
-                dInfo.ovenStatus = false;
-            }
-        }
-    }
+//    function firstButtonEvent()
+//    {
+//        if(myLoader.sourceComponent == mainManTemp) {
+//            myLoader.sourceComponent = mainManTimer;
+//        }
+//        else if(myLoader.sourceComponent == mainManTimer) {
+//            myLoader.sourceComponent = mainRunning;
+//            if(!dInfo.ovenStatus)
+//                this.firstButtonText = "STOP"
+//            else
+//                this.firstButtonText = "START"
+//        }
+//        else if(myLoader.sourceComponent == mainRunning || myLoader.sourceComponent == mainCamPre) {
+//            if(!dInfo.ovenStatus){
+//                this.firstButtonText = "STOP"
+//                dInfo.ovenStatus = true;
+//            }
+//            else{
+//                this.firstButtonText = "START"
+//                dInfo.ovenStatus = false;
+//            }
+//        }
+//    }
 
-    function secondButtonEvent()
-    {
-        if(myLoader.sourceComponent == mainRunning)
-            myLoader.sourceComponent = mainCamPre;
-        else
-            myLoader.sourceComponent = mainRunning;
-    }
+//    function secondButtonEvent()
+//    {
+//        if(myLoader.sourceComponent == mainRunning)
+//            myLoader.sourceComponent = mainCamPre;
+//        else
+//            myLoader.sourceComponent = mainRunning;
+//    }
 }

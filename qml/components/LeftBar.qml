@@ -1,20 +1,24 @@
 // LeftBar area
 import QtQuick 2.0
 
-Rectangle{
-    property alias powerButtonClicked: powerBtnClick
+Rectangle {
+    // Bar properties
+    property alias btnOvenAlias         : btnOven
+    property alias cookBookBtnAlias     : cookBookBtn
+    property alias moreButtonMouse      : moreButtonMA
 
-    property alias ovenButtonClicked: btnOvenClick
-    property alias btnOvenAlias: btnOven
+    // Oven power status
+    property bool pStatus               : false
 
-    property alias cookBookBtnClicked: cookBookBtnClick
-    property alias cookBookBtnAlias: cookBookBtn
-
-    property alias moreButtonMouse: moreButtonMouseArea
+    // Button click signals
+    signal powerButtonClk()
+    signal ovenButtonClk()
+    signal cookBookBtnClk()
+    signal moreButtonClk()
 
     id: rLeftBar
-    width: api.barWidth
-    height: api.mainHeight
+    width:360
+    height: 450
     color: "#8c8c8c"
     border.width: 1
     border.color: "white"
@@ -33,7 +37,7 @@ Rectangle{
             buttonWitdh: parent.width / 2
             buttonHeight: parent.width / 2
             imgVisible: true
-            imgSource: api.ovenPower ? "qrc:/pics/power/power-on.png": "qrc:/pics/power/power-off.png"
+            imgSource: pStatus ? "qrc:/pics/power/power-on.png": "qrc:/pics/power/power-off.png"
             textVisible: false
             anchors.centerIn: parent
             imgWidth: parent.width / 2
@@ -42,6 +46,7 @@ Rectangle{
             MouseArea {
                 id:powerBtnClick
                 anchors.fill: parent
+                onClicked: powerButtonClk();
             }
         }
     }
@@ -76,8 +81,9 @@ Rectangle{
                 imgHeight: parent.width - 30
 
                 MouseArea {
-                    id: btnOvenClick
+                    id: btnOvenMA
                     anchors.fill: parent
+                    onClicked: ovenButtonClk();
 
                 }
             }
@@ -105,8 +111,9 @@ Rectangle{
                 imgHeight: parent.width - 40
 
                 MouseArea {
-                    id: cookBookBtnClick
+                    id: cookBookBtnMA
                     anchors.fill: parent
+                    onClicked: cookBookBtnClk();
 
                 }
             }
@@ -133,8 +140,9 @@ Rectangle{
                 imgWidth: parent.width - 50
                 imgHeight: parent.width - 50
                 MouseArea {
-                    id:moreButtonMouseArea
+                    id:moreButtonMA
                     anchors.fill: parent
+                    onClicked: moreButtonClk()
                 }
             }
         }

@@ -3,8 +3,10 @@ import QtQuick.Controls 2.14
 import QtQuick.Controls.Styles 1.4
 
 import "../components"
-Component
+Rectangle
 {
+    property alias footer1Click: fPageRunning
+
     id: cRunning
 
     Rectangle
