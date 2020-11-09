@@ -1,19 +1,23 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.12
 
 import "../components"
 
-Rectangle {
+Page {
     // Page camera properties
-    property bool ovenStatus    : false
-    property bool powerStatus   : false
-    property bool lightStatus   : false
+    property bool oStatus   : false                 // Oven status
+    property bool pStatus   : false                 // Power status
+    property bool lStatus   : false                 // Light status
+
+    property alias footerProperties: fPageCamPre    // Footer properties
+    property string cTime                           // Current time
 
     id:rCamPre
     width: 880
     height: 450
-    color: "#333333"
-    visible: powerStatus ? true : false
+    visible: pStatus ? true : false
 
+    // Header
     Header
     {
         id: hPageCamPre
@@ -21,9 +25,12 @@ Rectangle {
         hHeight: parent.height / 6
         anchors.left: parent.left
         anchors.top: parent.top
+        curTime: cTime
+        ovStatus: oStatus
         z:3
     }
 
+    // Light area
     Rectangle
     {
         id: opaCam
@@ -32,10 +39,11 @@ Rectangle {
         anchors.left: hPageCamPre.left
         anchors.top: hPageCamPre.bottom
         color: "black"
-        opacity: lightStatus ? 0.8 : 1.0
+        opacity: lStatus ? 0.8 : 1.0
         z:2
     }
 
+    // Camera review :)
     Image
     {
         id: imgPreview
@@ -46,6 +54,7 @@ Rectangle {
         z:1
     }
 
+    // Footer
     Footer
     {
         id: fPageCamPre
@@ -53,13 +62,13 @@ Rectangle {
         hHeight: parent.height / 6
         anchors.left: parent.left
         anchors.bottom: parent.bottom
-        firstButtonWidth: 100
-        firstButtonHeight: 30
-        firstButtonVisible: true
-        firstButtonText: (ovenStatus == true) ? "STOP" : "START"
-        secondButtonWidth: 30
-        secondButtonHeight: 30
-        secondButtonVisible: true
+        operationalButtonWidth: 100
+        operationalButtonHeight: 30
+        operationalButtonVisible: true
+        operationalButtonText: (oStatus == true) ? "STOP" : "START"
+        cameraButtonWidth: 30
+        cameraButtonHeight: 30
+        cameraButtonVisible: true
         z:3
     }
 }

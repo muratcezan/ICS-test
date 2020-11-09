@@ -18,8 +18,8 @@ DataInfo::DataInfo(QObject *parent) : QObject(parent),
     setChronScFirstDgt(0);
     setChronScSecondDgt(0);
     setOvenStatus(false);
+    setTemp("350");
     setCurrentTime(QTime::currentTime().toString("hh:mm"));
-
 }
 
 // Time

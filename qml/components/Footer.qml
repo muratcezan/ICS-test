@@ -8,57 +8,53 @@ Rectangle
     property int hWidth                         // Footer width
     property int hHeight                        // Footer height
 
-    property int firstButtonWidth               // First button width
-    property int firstButtonHeight              // First button height
-    property bool firstButtonVisible            // First button visible
-    property string firstButtonText             // First button text
+    property int operationalButtonWidth               // First button width
+    property int operationalButtonHeight              // First button height
+    property bool operationalButtonVisible            // First button visible
+    property string operationalButtonText             // First button text
 
-    property int secondButtonWidth               // Second button width
-    property int secondButtonHeight              // Second button height
-    property bool secondButtonVisible            // Second button visible
+    property int cameraButtonWidth               // Second button width
+    property int cameraButtonHeight              // Second button height
+    property bool cameraButtonVisible            // Second button visible
 
-    // Buttons mouse events
-//    property alias fButtonMA: firstButtonArea
-//    property alias sButtonMA: secondButtonArea
+    signal operationalButtonClk()
+    signal cameraButtonClk()
 
-    signal clk()
-
-    width: hWidth
-    height: hHeight
-    color: "#737373"
     id:footerRoot
+    width: 880
+    height: 75
+    color: "#737373"
 
     // Operation button
     Button
     {
-        id: firstButton
-        buttonWitdh: firstButtonWidth
-        buttonHeight: firstButtonHeight
+        id: operationalButton
+        buttonWitdh: operationalButtonWidth
+        buttonHeight: operationalButtonHeight
         imgVisible: false
         textVisible: true
-        textSource: firstButtonText
+        textSource: operationalButtonText
         rectRadius: 10
         rectColor: "#a6a6a6"
         rectBorderSize: 1
         anchors.verticalCenter: parent.verticalCenter
         anchors.right: parent.right
         anchors.rightMargin: 20
-        visible: firstButtonVisible
+        visible: operationalButtonVisible
 
         MouseArea {
-            id:firstButtonArea
+            id:operationalButtonArea
             anchors.fill: parent
-//            onClicked: firstButtonEvent();
-            onClicked: footerRoot.clk()
+            onClicked: operationalButtonClk()
         }
     }
 
-    // Image button
+    // Camera view button
     Button
     {
-        id:secondButton
-        buttonHeight: secondButtonHeight
-        buttonWitdh: secondButtonWidth
+        id:cameraButton
+        buttonHeight: cameraButtonHeight
+        buttonWitdh: cameraButtonWidth
         imgVisible: true
         imgSource: "qrc:/pics/alarm/alarm-clock-rgb.png"
         rectRadius: 10
@@ -66,48 +62,15 @@ Rectangle
         rectBorderSize: 1
         imgWidth: 20
         imgHeight: 20
-        anchors.top: firstButton.top
-        anchors.right: firstButton.left
+        anchors.top: operationalButton.top
+        anchors.right: operationalButton.left
         anchors.rightMargin: 20
-        visible: secondButtonVisible
+        visible: cameraButtonVisible
 
         MouseArea {
-            id:secondButtonArea
+            id:cameraButtonArea
             anchors.fill: parent
-//            onClicked: secondButtonEvent();
-            onClicked: footerRoot.clk()
+            onClicked: cameraButtonClk()
         }
     }
-
-//    function firstButtonEvent()
-//    {
-//        if(myLoader.sourceComponent == mainManTemp) {
-//            myLoader.sourceComponent = mainManTimer;
-//        }
-//        else if(myLoader.sourceComponent == mainManTimer) {
-//            myLoader.sourceComponent = mainRunning;
-//            if(!dInfo.ovenStatus)
-//                this.firstButtonText = "STOP"
-//            else
-//                this.firstButtonText = "START"
-//        }
-//        else if(myLoader.sourceComponent == mainRunning || myLoader.sourceComponent == mainCamPre) {
-//            if(!dInfo.ovenStatus){
-//                this.firstButtonText = "STOP"
-//                dInfo.ovenStatus = true;
-//            }
-//            else{
-//                this.firstButtonText = "START"
-//                dInfo.ovenStatus = false;
-//            }
-//        }
-//    }
-
-//    function secondButtonEvent()
-//    {
-//        if(myLoader.sourceComponent == mainRunning)
-//            myLoader.sourceComponent = mainCamPre;
-//        else
-//            myLoader.sourceComponent = mainRunning;
-//    }
 }
